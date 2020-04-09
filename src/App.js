@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import './stylesheets/screen.css';
-
-const reminderArray = [
-  {id: 1, title: 'Take out trash', urgency: 3, completed: false },
-  {id: 2, title: 'Get groceries', urgency: 3, completed: false },
-  {id: 3, title: 'Wash dishes', urgency: 3, completed: false },
-  {id: 4, title: 'Clean closet', urgency: 3, completed: false },
-]
 
 class Reminder extends Component {
+  strikeout = () => {
+    return {
+      textDecoration: this.props.completed ? 'line-through' : 'none'
+    }
+  }
+
   render() {
+    const { id, title } = this.props;
     return (
-      <div id={this.props.id} class="reminder">
-        <input type="checkbox" name={this.props.id} value={this.props.id}/>
-        <label for={this.props.id}>{this.props.title}</label>
+      <div style={this.strikeout()} className="reminder">
+        <p>
+          <input
+            type="checkbox"
+            name={title}
+            value={title}
+            onClick={this.props.toggleComplete.bind(this, id)}
+          />
+          {title}
+          <button onClick={this.props.deleteRemininder.bind(this, id)}>X</button>
+        </p>
       </div>
     );
   }
@@ -22,9 +29,15 @@ class Reminder extends Component {
 class ReminderList extends Component {
   render() {
     return (
-      <div class="reminderList">
+      <div className="reminderList">
         {this.props.reminders.map(reminder =>
-          <Reminder key={reminder.id} {...reminder}/>)}
+          <Reminder
+            key={reminder.id}
+            toggleComplete={this.props.toggleComplete}
+            deleteRemininder={this.props.deleteRemininder}
+            {...reminder}
+          />
+        )}
       </div>
     );
   }
@@ -32,13 +45,42 @@ class ReminderList extends Component {
 
 class App extends Component {
   state = {
-    reminders: reminderArray,
+    reminders: [
+      {id: 1, title: 'Take out trash', urgency: 3, completed: false },
+      {id: 2, title: 'Get groceries', urgency: 3, completed: false },
+      {id: 3, title: 'Wash dishes', urgency: 3, completed: false },
+      {id: 4, title: 'Clean closet', urgency: 3, completed: false },
+    ]
+  };
+
+  toggleComplete = id => {
+    this.setState({
+      reminders: this.state.reminders.map(reminder => {
+        if (reminder.id === id) {
+          reminder.completed = !reminder.completed;
+        }
+        return reminder;
+      })
+    });
+  };
+
+  deleteRemininder = id => {
+    this.setState({
+      reminders: [...this.state.reminders.filter(reminder => reminder.id !== id)]
+    });
   };
 
   render() {
     return (
       <div className="App">
-        <ReminderList reminders={this.state.reminders}/>
+        <header>
+
+        </header>
+          <ReminderList
+            reminders={this.state.reminders}
+            toggleComplete={this.toggleComplete}
+            deleteRemininder={this.deleteRemininder}
+          />
       </div>
     );
   }
