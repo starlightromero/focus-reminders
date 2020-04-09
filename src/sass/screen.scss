@@ -1,5 +1,17 @@
 @import "compass/reset";
 
+/* Colors */
+$primary-color: blueviolet;
+$secondary-color: aqua;
+$secondary-color-alt: hsl(185, 42%, 46%);
+$tertiary-color: #99ffff;
+$light-color: hsl(271, 75%, 97%);
+$dark-color: #00004d;
+$white: #fff;
+$white-faded: hsla(0, 0%, 40%, 0.6);
+$black: #000;
+$black-faded: hsla(0, 0%, 0%, 0.6);
+
 .App {
   text-align: center;
 }
