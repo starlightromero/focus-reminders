@@ -187,7 +187,7 @@ class App extends Component {
           reminder.completed = !reminder.completed;
         }
         return reminder;
-      })
+      }).sort((a, b) => a.completed - b.completed)
     });
   };
 
