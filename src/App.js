@@ -82,9 +82,22 @@ class AddReminderForm extends Component {
 }
 
 class AddReminder extends Component {
-  handleClick = () => {
+  addForm = 'open';
+
+  setOpen = () => {
     document.getElementById('addReminderContainer').classList.remove('invisible');
     document.getElementById('addReminderForm').classList.remove('invisible');
+    this.addForm = 'open';
+  }
+
+  setClose = () => {
+    document.getElementById('addReminderContainer').classList.add('invisible');
+    document.getElementById('addReminderForm').classList.add('invisible');
+    this.addForm = 'close';
+  }
+
+  handleClick = () => {
+    this.addForm === 'open' ? this.setClose() : this.setOpen();
   }
 
   render() {
@@ -94,12 +107,39 @@ class AddReminder extends Component {
   }
 }
 
+class Settings extends Component {
+  setting = 'light';
+
+  setLight = () => {
+    document.getElementById('App').classList.remove('dark');
+    document.getElementById('App').classList.add('light');
+    this.settings = 'light';
+  }
+
+
+  setDark = () => {
+    document.getElementById('App').classList.remove('light');
+    document.getElementById('App').classList.add('dark');
+    this.settings = 'dark';
+  }
+
+  handleClick = () => {
+    this.settings === 'light' ? this.setDark() : this.setLight();
+  }
+
+  render () {
+    return (
+      <button onClick={this.handleClick}>S</button>
+    );
+  }
+}
+
 class Header extends Component {
   render() {
     return (
-      <header>
-        <button>S</button>
-        <div className="title">
+      <header class="d-flex flex-row justify-content-between">
+        <Settings/>
+        <div className="title d-flex flex-column">
           <h1>Focus</h1>
           <h3>On what drives you</h3>
         </div>
@@ -155,7 +195,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div id="App" className="App light d-flex flex-column align-items-stetch">
         <Header/>
         <AddReminderForm
           addReminder={this.addReminder}

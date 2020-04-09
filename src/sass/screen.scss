@@ -3,7 +3,6 @@
 /* Colors */
 $primary-color: blueviolet;
 $secondary-color: aqua;
-$secondary-color-alt: hsl(185, 42%, 46%);
 $tertiary-color: #99ffff;
 $light-color: hsl(271, 75%, 97%);
 $dark-color: #00004d;
@@ -12,11 +11,98 @@ $white-faded: hsla(0, 0%, 40%, 0.6);
 $black: #000;
 $black-faded: hsla(0, 0%, 0%, 0.6);
 
+%gradient-color-light {
+  background-image: linear-gradient(to right, $primary-color, $secondary-color);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+%gradient-color-dark {
+  background-image: linear-gradient(to right, $primary-color, $tertiary-color);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Styles */
+
 .App {
   text-align: center;
+  box-sizing: border-box;
+
+  header {
+    padding: 20px;
+
+    h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    button {
+      font-size: 4rem;
+    }
+  }
 }
 
 .invisible {
   visibility: hidden;
   display: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Light */
+
+.light {
+  background-color: $light-color;
+
+  header {
+    background-color: $white;
+    border-bottom: 4px solid $secondary-color;
+
+    h1 {
+      @extend %gradient-color-light;
+    }
+
+    h3, button {
+      color: $black;
+    }
+  }
+
+  p, button {
+    color: $black;
+  }
+}
+
+/* Dark */
+
+.dark {
+  background-color: $dark-color;
+
+  header {
+    background-color: $black;
+    border-bottom: 4px solid $tertiary-color;
+
+    h1 {
+      @extend %gradient-color-dark;
+    }
+
+    h3, button {
+      color: $white;
+    }
+  }
+
+  p, button {
+    color: $white;
+  }
 }
