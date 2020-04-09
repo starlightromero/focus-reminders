@@ -68,3 +68,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .App {
   text-align: center;
 }
+
+/* line 19, ../sass/screen.scss */
+.invisible {
+  visibility: hidden;
+  display: none;
+}

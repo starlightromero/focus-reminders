@@ -1,25 +1,42 @@
 import React, { Component } from 'react';
 
 class Reminder extends Component {
+  state = {
+    title: '',
+  }
+
   strikeout = () => {
     return {
       textDecoration: this.props.completed ? 'line-through' : 'none'
     }
   }
 
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+    this.props.changeReminder(this.state.title);
+  }
+
   render() {
     const { id, title } = this.props;
     return (
-      <div style={this.strikeout()} className="reminder">
+      <div className="reminder">
         <p>
           <input
             type="checkbox"
-            name={title}
-            value={title}
-            onClick={this.props.toggleComplete.bind(this, id)}
+            name={id}
+            defaultValue={id}
+            onChange={this.props.toggleComplete.bind(this, id)}
           />
-          {title}
-          <button onClick={this.props.deleteRemininder.bind(this, id)}>X</button>
+          <input
+            id={title}
+            type="text"
+            name="title"
+            defaultValue={title}
+            value={this.state.title}
+            style={this.strikeout()}
+            onChange={this.handleChange}
+          />
+          <button onClick={this.props.deleteReminder.bind(this, id)}>X</button>
         </p>
       </div>
     );
@@ -34,10 +51,82 @@ class ReminderList extends Component {
           <Reminder
             key={reminder.id}
             toggleComplete={this.props.toggleComplete}
-            deleteRemininder={this.props.deleteRemininder}
+            changeReminder={this.props.changeReminder}
+            deleteReminder={this.props.deleteReminder}
             {...reminder}
           />
         )}
+      </div>
+    );
+  }
+}
+
+class AddReminder extends Component {
+  handleClick = () => {
+    document.getElementById('addReminderContainer').classList.remove('invisible');
+    document.getElementById('addReminderForm').classList.remove('invisible');
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>+</button>
+    );
+  }
+}
+
+class Header extends Component {
+  render() {
+    return (
+      <header>
+        <button>S</button>
+        <div className="title">
+          <h1>Focus</h1>
+          <h3>On what drives you</h3>
+        </div>
+        <AddReminder addReminder={this.props.addReminder}/>
+      </header>
+    );
+  }
+}
+
+class AddReminderForm extends Component {
+  state = {
+    title: '',
+  }
+
+  handleChange = (event) => this.setState({ [event.target.name]: event.target.value });
+
+  handleClick = (event) => {
+    document.getElementById('addReminderContainer').classList.add('invisible');
+    document.getElementById('AddReminderForm').classList.add('invisible');
+
+    event.prevwentDefault();
+    this.props.addReminder(
+      this.state.title,
+    );
+    this.setState({
+      title: '',
+    })
+  }
+
+  render() {
+    return (
+      <div id="addReminderContainer" className="invisible">
+        <form id="addReminderForm" className="invisible">
+          <input
+            required
+            type="text"
+            name="title"
+            placeholder="Add Reminder..."
+            value={this.state.title}
+            onChange={this.handleChange}
+          />
+          <input
+          type="submit"
+          value="Add Reminder"
+          onClick={this.handleClick}
+          />
+        </form>
       </div>
     );
   }
@@ -53,6 +142,13 @@ class App extends Component {
     ]
   };
 
+  addReminder = () => {
+    // this.setState({
+    //   reminders: [...this.state.reminders, res.data]
+    // });
+    console.log("reminder added");
+  };
+
   toggleComplete = id => {
     this.setState({
       reminders: this.state.reminders.map(reminder => {
@@ -64,7 +160,11 @@ class App extends Component {
     });
   };
 
-  deleteRemininder = id => {
+  changeReminder = title => {
+    console.log(title)
+  };
+
+  deleteReminder = id => {
     this.setState({
       reminders: [...this.state.reminders.filter(reminder => reminder.id !== id)]
     });
@@ -73,14 +173,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-
-        </header>
-          <ReminderList
-            reminders={this.state.reminders}
-            toggleComplete={this.toggleComplete}
-            deleteRemininder={this.deleteRemininder}
-          />
+        <Header
+          addReminder={this.addReminder}
+        />
+        <AddReminderForm />
+        <ReminderList
+          reminders={this.state.reminders}
+          toggleComplete={this.toggleComplete}
+          changeReminder={this.changeReminder}
+          deleteReminder={this.deleteReminder}
+        />
       </div>
     );
   }
