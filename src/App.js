@@ -137,7 +137,7 @@ class Settings extends Component {
 class Header extends Component {
   render() {
     return (
-      <header class="d-flex flex-row justify-content-between">
+      <header className="d-flex flex-row justify-content-between">
         <Settings/>
         <div className="title d-flex flex-column">
           <h1>Focus</h1>
@@ -156,6 +156,14 @@ class App extends Component {
       {id: 2, title: 'Get groceries', completed: false },
       {id: 3, title: 'Wash dishes', completed: false },
       {id: 4, title: 'Clean closet', completed: false },
+      {id: 5, title: 'Take out trash', completed: false },
+      {id: 6, title: 'Get groceries', completed: false },
+      {id: 7, title: 'Wash dishes', completed: false },
+      {id: 8, title: 'Clean closet', completed: false },
+      {id: 9, title: 'Take out trash', completed: false },
+      {id: 10, title: 'Get groceries', completed: false },
+      {id: 11, title: 'Wash dishes', completed: false },
+      {id: 12, title: 'Clean closet', completed: false },
     ]
   };
 
@@ -195,7 +203,7 @@ class App extends Component {
 
   render() {
     return (
-      <div id="App" className="App light d-flex flex-column align-items-stetch">
+      <div id="App" className="App light d-flex flex-column justify-content-end">
         <Header/>
         <AddReminderForm
           addReminder={this.addReminder}

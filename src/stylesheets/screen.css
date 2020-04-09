@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Colors */
-/* line 14, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 .light header h1 {
   background-image: linear-gradient(to right, blueviolet, aqua);
   color: transparent;
@@ -72,7 +72,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-clip: text;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .dark header h1 {
   background-image: linear-gradient(to right, blueviolet, #99ffff);
   color: transparent;
@@ -80,78 +80,160 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-clip: text;
 }
 
-/* Styles */
-/* line 30, ../sass/screen.scss */
-.App {
-  text-align: center;
-  box-sizing: border-box;
-}
-/* line 34, ../sass/screen.scss */
-.App header {
-  padding: 20px;
-}
-/* line 37, ../sass/screen.scss */
-.App header h1 {
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-/* line 42, ../sass/screen.scss */
-.App header h3 {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-/* line 47, ../sass/screen.scss */
-.App header button {
-  font-size: 4rem;
-}
-
-/* line 53, ../sass/screen.scss */
-.invisible {
-  visibility: hidden;
-  display: none;
-}
-
-/* line 58, ../sass/screen.scss */
-button {
+/* line 29, ../sass/screen.scss */
+.App header button, .App .reminderList .reminder p button {
   border: none;
   background-color: transparent;
   padding: 0;
 }
 
-/* Light */
+/* Styles */
+/* line 41, ../sass/screen.scss */
+.App {
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+/* line 47, ../sass/screen.scss */
+.App header {
+  padding: 2rem;
+}
+/* line 50, ../sass/screen.scss */
+.App header h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-family: 'Orbitron', sans-serif;
+}
+/* line 57, ../sass/screen.scss */
+.App header h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0.5rem;
+  padding-right: 0.5rem;
+}
 /* line 66, ../sass/screen.scss */
+.App header button {
+  font-size: 4rem;
+}
+/* line 72, ../sass/screen.scss */
+.App .reminderList {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  min-height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 84, ../sass/screen.scss */
+.App .reminderList .reminder p {
+  width: 500px;
+  padding: 0.8rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 1rem;
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 95, ../sass/screen.scss */
+.App .reminderList .reminder p input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-right: 1rem;
+  border: 1px solid blueviolet;
+  border-radius: 12px;
+}
+/* line 103, ../sass/screen.scss */
+.App .reminderList .reminder p input[type="checkbox"]:hover {
+  background-color: aqua;
+}
+/* line 106, ../sass/screen.scss */
+.App .reminderList .reminder p input[type="checkbox"]:checked {
+  background-color: blueviolet;
+}
+/* line 111, ../sass/screen.scss */
+.App .reminderList .reminder p button {
+  margin-left: 1rem;
+  font-weight: 900;
+  padding: 5px 7px;
+  border: 2px solid transparent;
+  border-radius: 100%;
+}
+
+/* line 124, ../sass/screen.scss */
+.invisible {
+  visibility: hidden;
+  display: none;
+}
+
+/* Light */
+/* line 131, ../sass/screen.scss */
 .light {
   background-color: #f8f2fd;
 }
-/* line 69, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .light header {
   background-color: #fff;
   border-bottom: 4px solid aqua;
 }
-/* line 77, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .light header h3, .light header button {
   color: #000;
 }
-/* line 82, ../sass/screen.scss */
-.light p, .light button {
+/* line 146, ../sass/screen.scss */
+.light header button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+/* line 151, ../sass/screen.scss */
+.light p {
   color: #000;
+  background-color: #fff;
+  border: 2px solid aqua;
+  button-color: #000;
+}
+/* line 160, ../sass/screen.scss */
+.light p button:hover {
+  color: aqua;
 }
 
 /* Dark */
-/* line 89, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .dark {
-  background-color: #00004d;
+  background-color: #300b51;
 }
-/* line 92, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .dark header {
   background-color: #000;
   border-bottom: 4px solid #99ffff;
 }
-/* line 100, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .dark header h3, .dark header button {
   color: #fff;
 }
-/* line 105, ../sass/screen.scss */
-.dark p, .dark button {
+/* line 183, ../sass/screen.scss */
+.dark header button:hover {
+  color: rgba(102, 102, 102, 0.6);
+}
+/* line 188, ../sass/screen.scss */
+.dark p {
   color: #fff;
+  background-color: #00004d;
+  border: 2px solid #99ffff;
+}
+/* line 193, ../sass/screen.scss */
+.dark p button {
+  color: #fff;
+}
+/* line 197, ../sass/screen.scss */
+.dark p button:hover {
+  color: #99ffff;
 }
