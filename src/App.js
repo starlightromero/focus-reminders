@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 
+class NoReminders extends Component {
+  render() {
+    return (
+      <h2 className="noReminders">
+        Add a goal to <span className="focus">FOCUS</span> on
+      </h2>
+    );
+  }
+}
+
 class Reminder extends Component {
   strikeout = () => {
     return {
@@ -27,9 +37,16 @@ class Reminder extends Component {
 }
 
 class ReminderList extends Component {
+  checkLength = length => {
+    if (length === 0) {
+      return <NoReminders />
+    }
+  }
+
   render() {
     return (
       <div className="reminderList">
+        {this.checkLength(this.props.reminders.length)}
         {this.props.reminders.map(reminder =>
           <Reminder
             key={reminder.id}
