@@ -151,7 +151,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     flex-direction: column;
     align-items: center;
 
-    .noFocuses {
+    .noFocus {
       font-size: 2rem;
       margin-top: 9rem;
 
@@ -235,7 +235,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
   .focusList {
 
-    .noFocuses {
+    .noFocus {
 
       span {
         color: $primary-color;
@@ -320,7 +320,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
   .focusList {
 
-    .noFocuses {
+    .noFocus {
       color: $white;
 
       span {
