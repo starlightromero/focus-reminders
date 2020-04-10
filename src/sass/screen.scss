@@ -2,11 +2,12 @@
 
 /* Colors */
 $primary-color: blueviolet;
-$secondary-color: aqua;
-$tertiary-color: #99ffff;
-$light-color: hsl(271, 75%, 97%);
-$dark-color: #00004d;
-$dark-secondary-color: #300b51;
+$secondary-color: hsl(180, 100, 50%);
+$light-primary-color: hsl(235, 70%, 69%);
+$light-secondary-color: hsl(180, 100%, 70%);
+$light-background-color: hsl(271, 70%, 96%);
+$dark-primary-color: #00004d;
+$dark-background-color: #300b51;
 $white: #fff;
 $white-faded: hsla(0, 0%, 40%, 0.6);
 $black: #000;
@@ -14,16 +15,24 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
 %gradient-color-light {
   background-image: linear-gradient(to right, $primary-color, $secondary-color);
-  color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  color: transparent;
 }
 
 %gradient-color-dark {
-  background-image: linear-gradient(to right, $primary-color, $tertiary-color);
-  color:transparent;
+  background-image: linear-gradient(to right, $primary-color, $secondary-color);
   -webkit-background-clip: text;
   background-clip: text;
+  color: transparent;
+}
+
+%gradient-background-light {
+  background-image: linear-gradient(to right, $light-secondary-color, $light-primary-color, $light-secondary-color);
+}
+
+%gradient-background-dark {
+  background-image: linear-gradient(to right, $light-secondary-color, $primary-color, $light-secondary-color);
 }
 
 %button {
@@ -95,17 +104,10 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
         input[type="checkbox"] {
           -webkit-appearance: none;
           -moz-appearance: none;
-          height: 20px;
-          width: 20px;
+          height: 1.5rem;
+          width: 1.5rem;
           margin-right: 1rem;
-          border: 1px solid $primary-color;
           border-radius: 12px;
-          &:hover {
-            background-color: $secondary-color;
-          }
-          &:checked {
-            background-color: $primary-color;
-          }
         }
 
         button {
@@ -129,11 +131,11 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 /* Light */
 
 .light {
-  background-color: $light-color;
+  background-color: $light-background-color;
 
   header {
     background-color: $white;
-    border-bottom: 4px solid $secondary-color;
+    border-bottom: 4px solid $light-primary-color;
 
     h1 {
       @extend %gradient-color-light;
@@ -151,14 +153,24 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
   p {
     color: $black;
     background-color: $white;
-    border: 2px solid $secondary-color;
+    border: 2px solid $light-primary-color;
+    &:hover {
+      @extend %gradient-background-light;
+      border: 2px solid transparent;
+    }
+
+    input[type="checkbox"] {
+      border: 1px solid $light-primary-color;
+      &:hover {
+        background-color: $light-primary-color;
+      }
+      &:checked {
+        background-color: $light-primary-color;
+      }
+    }
 
     button: {
       color: $black;
-    }
-
-    button:hover {
-      color: $secondary-color;
     }
   }
 }
@@ -166,11 +178,11 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 /* Dark */
 
 .dark {
-  background-color: $dark-secondary-color;
+  background-color: $dark-background-color;
 
   header {
     background-color: $black;
-    border-bottom: 4px solid $tertiary-color;
+    border-bottom: 4px solid $secondary-color;
 
     h1 {
       @extend %gradient-color-dark;
@@ -187,15 +199,26 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
   p {
     color: $white;
-    background-color: $dark-color;
-    border: 2px solid $tertiary-color;
+    background-color: $dark-primary-color;
+    border: 2px solid $secondary-color;
+    &:hover {
+      @extend %gradient-background-dark;
+      border: 2px solid transparent;
+    }
+
+    input[type="checkbox"] {
+      border: 1px solid $secondary-color;
+      &:hover {
+        background-color: $primary-color;
+        border: 1px solid transparent;
+      }
+      &:checked {
+        background-color: $light-primary-color;
+      }
+    }
 
     button {
       color: $white;
-    }
-
-    button:hover {
-      color: $tertiary-color;
     }
   }
 }
