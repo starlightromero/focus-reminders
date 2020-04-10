@@ -101,7 +101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 46, ../sass/screen.scss */
 .invisible {
   visibility: hidden;
-  display: none;
+  opacity: 0;
 }
 
 /* line 51, ../sass/screen.scss */
@@ -207,12 +207,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   align-items: center;
 }
 /* line 154, ../sass/screen.scss */
-.App .reminderList .noReminders {
+.App .reminderList .noFocuses {
   font-size: 2rem;
   margin-top: 9rem;
 }
 /* line 158, ../sass/screen.scss */
-.App .reminderList .noReminders .focus {
+.App .reminderList .noFocuses .focus {
   font-size: 3rem;
 }
 /* line 163, ../sass/screen.scss */
@@ -277,7 +277,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border: 2px solid #7982e7;
 }
 /* line 240, ../sass/screen.scss */
-.light .reminderList .noReminders .focus {
+.light .reminderList .noFocuses .focus {
   color: #8a2be2;
 }
 /* line 245, ../sass/screen.scss */
@@ -345,11 +345,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #fff;
 }
 /* line 323, ../sass/screen.scss */
-.dark .reminderList .noReminders {
+.dark .reminderList .noFocuses {
   color: #fff;
 }
 /* line 326, ../sass/screen.scss */
-.dark .reminderList .noReminders .focus {
+.dark .reminderList .noFocuses .focus {
   color: #00ffff;
 }
 /* line 331, ../sass/screen.scss */

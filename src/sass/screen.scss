@@ -45,7 +45,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
 .invisible {
   visibility: hidden;
-  display: none;
+  opacity: 0;
 }
 
 .App {
@@ -151,7 +151,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     flex-direction: column;
     align-items: center;
 
-    .noReminders {
+    .noFocuses {
       font-size: 2rem;
       margin-top: 9rem;
 
@@ -235,7 +235,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
   .reminderList {
 
-    .noReminders {
+    .noFocuses {
 
       .focus {
         color: $primary-color;
@@ -320,7 +320,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
   .reminderList {
 
-    .noReminders {
+    .noFocuses {
       color: $white;
 
       .focus {

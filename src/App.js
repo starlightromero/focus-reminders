@@ -84,14 +84,14 @@ class AddReminderForm extends Component {
           <input
             type="text"
             name="title"
-            placeholder="Add Reminder..."
+            placeholder="Add Focus..."
             value={this.state.title}
             onChange={this.handleChange}
           />
           <br/>
           <input
           type="submit"
-          value="Add Reminder"
+          value="Add Focus"
           />
         </form>
       </div>
