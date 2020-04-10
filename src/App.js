@@ -102,7 +102,9 @@ class AddReminder extends Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>+</button>
+      <button onClick={this.handleClick}>
+        <img src="https://i.postimg.cc/nLftDrq2/add-256.png" alt="add"/>
+      </button>
     );
   }
 }
@@ -129,7 +131,9 @@ class Settings extends Component {
 
   render () {
     return (
-      <button onClick={this.handleClick}>S</button>
+      <button onClick={this.handleClick}>
+       <img src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="settings" />
+      </button>
     );
   }
 }
@@ -203,7 +207,7 @@ class App extends Component {
 
   render() {
     return (
-      <div id="App" className="App light d-flex flex-column justify-content-end">
+      <div id="App" className="App light">
         <Header/>
         <AddReminderForm
           addReminder={this.addReminder}

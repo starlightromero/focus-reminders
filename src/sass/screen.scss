@@ -1,11 +1,11 @@
 @import "compass/reset";
 
 /* Colors */
-$primary-color: blueviolet;
-$secondary-color: hsl(180, 100, 50%);
-$light-primary-color: hsl(235, 70%, 69%);
-$light-secondary-color: hsl(180, 100%, 70%);
-$light-background-color: hsl(271, 70%, 96%);
+$primary-color: #8a2be2;
+$secondary-color: #00ffff;
+$light-primary-color: #7982E7;
+$light-secondary-color: #66ffff;
+$light-background-color: #f6effc;
 $dark-primary-color: #00004d;
 $dark-background-color: #300b51;
 $white: #fff;
@@ -51,10 +51,14 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
   text-align: center;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   height: 100%;
 
   header {
-    padding: 2rem;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     h1 {
       font-size: 4rem;
@@ -74,7 +78,12 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
     button {
       @extend %button;
+      @extend %gradient-color-light;
       font-size: 4rem;
+
+      img {
+        width: 100px;
+      }
     }
   }
 
@@ -144,10 +153,6 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     h3, button {
       color: $black;
     }
-
-    button:hover {
-      color: $black-faded;
-    }
   }
 
   p {
@@ -190,10 +195,6 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
     h3, button {
       color: $white;
-    }
-
-    button:hover {
-      color: $white-faded;
     }
   }
 
