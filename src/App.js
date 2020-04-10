@@ -63,7 +63,7 @@ class AddReminderForm extends Component {
   render() {
     return (
       <div onSubmit={this.handleSubmit} id="addReminderContainer" className="invisible">
-        <form id="addReminderForm" className="invisible">
+        <form id="addReminderForm" className="addReminderForm invisible">
           <input
             type="text"
             name="title"
