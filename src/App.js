@@ -71,6 +71,7 @@ class AddReminderForm extends Component {
             value={this.state.title}
             onChange={this.handleChange}
           />
+          <br/>
           <input
           type="submit"
           value="Add Reminder"
@@ -102,8 +103,8 @@ class AddReminder extends Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>
-        <img src="https://i.postimg.cc/nLftDrq2/add-256.png" alt="add"/>
+      <button>
+        <img onClick={this.handleClick} src="https://i.postimg.cc/nLftDrq2/add-256.png" alt="add"/>
       </button>
     );
   }
@@ -131,8 +132,8 @@ class Settings extends Component {
 
   render () {
     return (
-      <button onClick={this.handleClick}>
-       <img src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="settings" />
+      <button>
+       <img onClick={this.handleClick} src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="settings" />
       </button>
     );
   }
@@ -141,9 +142,9 @@ class Settings extends Component {
 class Header extends Component {
   render() {
     return (
-      <header className="d-flex flex-row justify-content-between">
+      <header>
         <Settings/>
-        <div className="title d-flex flex-column">
+        <div className="title">
           <h1>Focus</h1>
           <h3>On what drives you</h3>
         </div>

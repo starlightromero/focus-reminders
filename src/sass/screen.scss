@@ -14,14 +14,14 @@ $black: #000;
 $black-faded: hsla(0, 0%, 0%, 0.6);
 
 %gradient-color-light {
-  background-image: linear-gradient(to right, $primary-color, $secondary-color);
+  background-image: linear-gradient(to right, $white, $primary-color, $secondary-color, $white);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 %gradient-color-dark {
-  background-image: linear-gradient(to right, $primary-color, $secondary-color);
+  background-image: linear-gradient(to right, $black, $primary-color, $secondary-color, $black);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -54,21 +54,22 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: 'Montserrat', sans-serif;
 
   header {
-    padding: 2rem 4rem;
+    padding: 2rem 0rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     position:fixed;
     height: 200px;
-    z-index: 3;
+    z-index: 2;
     width: 100%;
 
     .title {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      flex-grow: 2;
 
       h1 {
         font-size: 4rem;
@@ -90,10 +91,12 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     button {
       @extend %button;
       @extend %gradient-color-light;
-      font-size: 4rem;
+      flex-grow: 1;
+      cursor: default;
 
       img {
         width: 100px;
+        cursor: pointer;
       }
     }
   }
@@ -102,22 +105,37 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     top: 0;
     right: 0;
     width: 25%;
-    height: 100%;
+    bottom: 0;
     position: fixed;
-    margin-top: 200px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: $white;
-    border-left: 4px solid $light-primary-color;
+    margin-top: 196px;
+    z-index: 3;
 
     .addReminderForm {
+      height: 100%;
+      width: 100%;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       input {
+        min-height: 2rem;
         width: 100%;
         margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      input[type="text"] {
+        font-size: 1.5rem;
+        outline: none;
+        border: none;
+      }
+
+      input[type="submit"] {
+        @extend %button;
+        text-transform: uppercase;
+        padding: 0.8rem 2rem;
+        border-radius: 10rem;
       }
     }
   }
@@ -134,9 +152,9 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     align-items: center;
 
     .reminder {
+      width: 40%;
 
       p {
-        width: 500px;
         padding: 0.8rem 2rem;
         font-family: 'Montserrat', sans-serif;
         margin: 1rem;
@@ -181,8 +199,27 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       @extend %gradient-color-light;
     }
 
-    h3, button {
+    h3 {
       color: $black;
+    }
+  }
+
+  #addReminderContainer {
+    background-color: $white;
+    border-left: 4px solid $light-primary-color;
+
+    .addReminderForm {
+
+      input[type="text"] {
+        border-bottom: 2px solid $light-primary-color;
+      }
+
+      input[type="submit"] {
+        border: 2px solid $light-primary-color;
+        &:hover {
+          @extend %gradient-background-light;
+        }
+      }
     }
   }
 
@@ -224,8 +261,31 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       @extend %gradient-color-dark;
     }
 
-    h3, button {
+    h3 {
       color: $white;
+    }
+  }
+
+  #addReminderContainer {
+    background-color: $black;
+    border-left: 4px solid $secondary-color;
+
+    .addReminderForm {
+
+      input[type="text"] {
+        color: $white;
+        background-color: $black;
+        border-bottom: 2px solid $secondary-color;
+      }
+
+      input[type="submit"] {
+        border: 2px solid $secondary-color;
+        background-color: $dark-primary-color;
+        color: $white;
+        &:hover {
+          @extend %gradient-background-light;
+        }
+      }
     }
   }
 
@@ -240,6 +300,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
     input[type="checkbox"] {
       border: 1px solid $secondary-color;
+      background-color: $dark-primary-color;
       &:hover {
         background-color: $primary-color;
         border: 1px solid transparent;
