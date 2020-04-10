@@ -82,7 +82,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 30, ../sass/screen.scss */
 .light #addReminderContainer .addReminderForm input[type="submit"]:hover, .light .reminderList p:hover, .dark #addReminderContainer .addReminderForm input[type="submit"]:hover {
-  background-image: linear-gradient(to right, #66ffff, #7982E7, #66ffff);
+  background-image: linear-gradient(to right, #66ffff, #7982e7, #66ffff);
 }
 
 /* line 34, ../sass/screen.scss */
@@ -256,7 +256,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 203, ../sass/screen.scss */
 .light header {
   background-color: #fff;
-  border-bottom: 4px solid #7982E7;
+  border-bottom: 4px solid #7982e7;
 }
 /* line 211, ../sass/screen.scss */
 .light header h3 {
@@ -265,109 +265,127 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 216, ../sass/screen.scss */
 .light #addReminderContainer {
   background-color: #fff;
-  border-left: 4px solid #7982E7;
+  border-left: 4px solid #7982e7;
 }
 /* line 222, ../sass/screen.scss */
 .light #addReminderContainer .addReminderForm input[type="text"] {
-  border-bottom: 2px solid #7982E7;
+  border-bottom: 2px solid #7982e7;
 }
 /* line 226, ../sass/screen.scss */
 .light #addReminderContainer .addReminderForm input[type="submit"] {
   background-color: #f6effc;
-  border: 2px solid #7982E7;
+  border: 2px solid #7982e7;
 }
 /* line 240, ../sass/screen.scss */
 .light .reminderList .noReminders .focus {
   color: #8a2be2;
 }
 /* line 245, ../sass/screen.scss */
+.light .reminderList .completed {
+  background-color: #7982e7;
+  color: #fff;
+}
+/* line 249, ../sass/screen.scss */
+.light .reminderList .completed button {
+  color: #fff;
+}
+/* line 254, ../sass/screen.scss */
 .light .reminderList p {
   color: #000;
   background-color: #fff;
-  border: 2px solid #7982E7;
+  border: 2px solid #7982e7;
   button-color: #000;
 }
-/* line 249, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .light .reminderList p:hover {
   border: 2px solid transparent;
 }
-/* line 254, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 .light .reminderList p input[type="checkbox"] {
-  border: 1px solid #7982E7;
+  border: 1px solid #7982e7;
 }
-/* line 256, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 .light .reminderList p input[type="checkbox"]:hover {
-  background-color: #7982E7;
+  background-color: #7982e7;
 }
-/* line 259, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .light .reminderList p input[type="checkbox"]:checked {
-  background-color: #7982E7;
+  background-color: #7982e7;
 }
 
 /* Dark */
-/* line 273, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .dark {
   background-color: #300b51;
 }
-/* line 276, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .dark header {
   background-color: #000;
   border-bottom: 4px solid #00ffff;
 }
-/* line 284, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .dark header h3 {
   color: #fff;
 }
-/* line 289, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
 .dark #addReminderContainer {
   background-color: #000;
   border-left: 4px solid #00ffff;
 }
-/* line 295, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 .dark #addReminderContainer .addReminderForm input[type="text"] {
   color: #fff;
   background-color: #000;
   border-bottom: 2px solid #00ffff;
 }
-/* line 301, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 .dark #addReminderContainer .addReminderForm input[type="submit"] {
   border: 2px solid #00ffff;
   background-color: #00004d;
   color: #fff;
 }
-/* line 314, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .dark .reminderList .noReminders {
   color: #fff;
 }
-/* line 317, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 .dark .reminderList .noReminders .focus {
   color: #00ffff;
 }
-/* line 322, ../sass/screen.scss */
+/* line 331, ../sass/screen.scss */
+.dark .reminderList .completed {
+  background-color: #00ffff;
+  color: #000;
+}
+/* line 335, ../sass/screen.scss */
+.dark .reminderList .completed button {
+  color: #000;
+}
+/* line 340, ../sass/screen.scss */
 .dark .reminderList p {
   color: #fff;
   background-color: #00004d;
   border: 2px solid #00ffff;
 }
-/* line 326, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 .dark .reminderList p:hover {
   border: 2px solid transparent;
 }
-/* line 331, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 .dark .reminderList p input[type="checkbox"] {
   border: 1px solid #00ffff;
   background-color: #00004d;
 }
-/* line 334, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .dark .reminderList p input[type="checkbox"]:hover {
   background-color: #8a2be2;
   border: 1px solid transparent;
 }
-/* line 338, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 .dark .reminderList p input[type="checkbox"]:checked {
-  background-color: #7982E7;
+  background-color: #00ffff;
 }
-/* line 343, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 .dark .reminderList p button {
   color: #fff;
 }

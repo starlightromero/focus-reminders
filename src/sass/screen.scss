@@ -3,7 +3,7 @@
 /* Colors */
 $primary-color: #8a2be2;
 $secondary-color: #00ffff;
-$light-primary-color: #7982E7;
+$light-primary-color: #7982e7;
 $light-secondary-color: #66ffff;
 $light-background-color: #f6effc;
 $dark-primary-color: #00004d;
@@ -242,6 +242,15 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       }
     }
 
+    .completed {
+      background-color: $light-primary-color;
+      color: $white;
+
+      button {
+        color: $white;
+      }
+    }
+
     p {
       color: $black;
       background-color: $white;
@@ -319,6 +328,15 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       }
     }
 
+    .completed {
+      background-color: $secondary-color;
+      color: $black;
+
+      button {
+        color: $black;
+      }
+    }
+
     p {
       color: $white;
       background-color: $dark-primary-color;
@@ -336,7 +354,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
           border: 1px solid transparent;
         }
         &:checked {
-          background-color: $light-primary-color;
+          background-color: $secondary-color;
         }
       }
 

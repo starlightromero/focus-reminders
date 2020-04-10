@@ -4,24 +4,24 @@ class NoReminders extends Component {
   render() {
     return (
       <h2 className="noReminders">
-        Add a goal to <span className="focus">FOCUS</span> on
+        Add a <span className="focus">FOCUS</span> to your life
       </h2>
     );
   }
 }
 
 class Reminder extends Component {
-  strikeout = () => {
-    return {
-      textDecoration: this.props.completed ? 'line-through' : 'none'
+  completed = () => {
+    if (this.props.completed) {
+      return 'completed'
     }
   }
 
   render() {
     const { id, title } = this.props;
     return (
-      <div style={this.strikeout()} className="reminder">
-        <p>
+      <div className="reminder">
+        <p className={this.completed()}>
           <input
             type="checkbox"
             name={id}
