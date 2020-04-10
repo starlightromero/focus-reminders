@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-class Focus extends Component {
+class FocusItem extends Component {
   completed = () => this.props.completed ? 'completed' : ''
 
   render() {
     const { id, title } = this.props
     return (
-      <div className="focus">
+      <div className="focusItem">
         <p className={this.completed()}>
           <input
             type="checkbox"
@@ -22,4 +22,4 @@ class Focus extends Component {
   }
 }
 
-export default Focus
+export default FocusItem

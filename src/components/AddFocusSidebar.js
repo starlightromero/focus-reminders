@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class AddFocusForm extends Component {
+class AddFocusSidebar extends Component {
   state = {
     title: ''
   }
@@ -38,4 +38,4 @@ class AddFocusForm extends Component {
   }
 }
 
-export default AddFocusForm
+export default AddFocusSidebar

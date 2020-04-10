@@ -49,6 +49,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 .invisible {
   visibility: hidden;
   opacity: 0;
+  display: none;
 }
 
 .App {
@@ -184,7 +185,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       }
     }
 
-    .focus {
+    .focusItem {
       width: 40%;
 
       p {
