@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class AddFocus extends Component {
-  addForm = 'open'
+  addForm = 'close'
 
   setOpen = () => {
     document.getElementById('addFocusContainer').classList.remove('invisible')

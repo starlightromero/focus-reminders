@@ -1,6 +1,7 @@
 @import "compass/reset";
 
 /* Colors */
+
 $primary-color: #8a2be2;
 $secondary-color: #00ffff;
 $light-primary-color: #7982e7;
@@ -12,6 +13,8 @@ $white: #fff;
 $white-faded: hsla(0, 0%, 40%, 0.6);
 $black: #000;
 $black-faded: hsla(0, 0%, 0%, 0.6);
+
+/* Extentions */
 
 %gradient-color-light {
   background-image: linear-gradient(to right, $white, $primary-color, $secondary-color, $white);
@@ -101,6 +104,28 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
+  #settingsSidebar {
+    top: 0;
+    left: 0;
+    width: 25%;
+    bottom: 0;
+    position: fixed;
+    margin-top: 196px;
+    z-index: 3;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button {
+      @extend %button;
+      text-transform: uppercase;
+      padding: 0.8rem 2rem;
+      border-radius: 10rem;
+      font-size: 1.5rem;
+    }
+  }
+
   #addFocusContainer {
     top: 0;
     right: 0;
@@ -126,7 +151,6 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       }
 
       input[type="text"] {
-        font-size: 1.5rem;
         outline: none;
         border: none;
       }
@@ -213,6 +237,19 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
+  #settingsSidebar {
+    background-color: $white;
+    border-right: 4px solid $light-primary-color;
+
+    button {
+      background-color: $light-background-color;
+      border: 2px solid $light-primary-color;
+      &:hover {
+        @extend %gradient-background-light;
+      }
+    }
+  }
+
   #addFocusContainer {
     background-color: $white;
     border-left: 4px solid $light-primary-color;
@@ -292,6 +329,20 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
     h3 {
       color: $white;
+    }
+  }
+
+  #settingsSidebar {
+    background-color: $black;
+    border-right: 4px solid $secondary-color;
+
+    button {
+      color: $white;
+      background-color: $dark-primary-color;
+      border: 2px solid $secondary-color;
+      &:hover {
+        @extend %gradient-background-dark;
+      }
     }
   }
 

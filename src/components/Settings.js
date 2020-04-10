@@ -1,26 +1,24 @@
 import React, { Component } from 'react'
 
 class Settings extends Component {
-  setting = 'light'
+  sidebar = 'close'
 
-  setLight = () => {
-    document.getElementById('App').classList.remove('dark')
-    document.getElementById('App').classList.add('light')
-    this.settings = 'light'
+  setOpen = () => {
+    document.getElementById('settingsSidebar').classList.remove('invisible')
+    this.sidebar = 'open'
   }
 
-  setDark = () => {
-    document.getElementById('App').classList.remove('light')
-    document.getElementById('App').classList.add('dark')
-    this.settings = 'dark'
+  setClose = () => {
+    document.getElementById('settingsSidebar').classList.add('invisible')
+    this.sidebar = 'close'
   }
 
-  handleClick = () => this.settings === 'light' ? this.setDark() : this.setLight()
+  handleClick = () => this.sidebar === 'open' ? this.setClose() : this.setOpen()
 
-  render () {
+  render() {
     return (
       <button>
-       <img onClick={this.handleClick} src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="settings" />
+        <img onClick={this.handleClick} src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="add"/>
       </button>
     )
   }

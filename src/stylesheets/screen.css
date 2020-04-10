@@ -64,7 +64,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Colors */
-/* line 16, ../sass/screen.scss */
+/* Extentions */
+/* line 19, ../sass/screen.scss */
 .App header button, .light header h1 {
   background-image: linear-gradient(to right, #fff, #8a2be2, #00ffff, #fff);
   -webkit-background-clip: text;
@@ -72,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: transparent;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 .dark header h1 {
   background-image: linear-gradient(to right, #000, #8a2be2, #00ffff, #000);
   -webkit-background-clip: text;
@@ -80,31 +81,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: transparent;
 }
 
-/* line 30, ../sass/screen.scss */
-.light #addFocusContainer .addFocusForm input[type="submit"]:hover, .light .focusList p:hover, .dark #addFocusContainer .addFocusForm input[type="submit"]:hover {
+/* line 33, ../sass/screen.scss */
+.light #settingsSidebar button:hover, .light #addFocusContainer .addFocusForm input[type="submit"]:hover, .light .focusList p:hover, .dark #addFocusContainer .addFocusForm input[type="submit"]:hover {
   background-image: linear-gradient(to right, #66ffff, #7982e7, #66ffff);
 }
 
-/* line 34, ../sass/screen.scss */
-.dark .focusList p:hover {
+/* line 37, ../sass/screen.scss */
+.dark #settingsSidebar button:hover, .dark .focusList p:hover {
   background-image: linear-gradient(to right, #66ffff, #8a2be2, #66ffff);
 }
 
-/* line 38, ../sass/screen.scss */
-.App header button, .App #addFocusContainer .addFocusForm input[type="submit"], .App .focusList .focus p button {
+/* line 41, ../sass/screen.scss */
+.App header button, .App #settingsSidebar button, .App #addFocusContainer .addFocusForm input[type="submit"], .App .focusList .focus p button {
   border: none;
   background-color: transparent;
   padding: 0;
 }
 
 /* Styles */
-/* line 46, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .invisible {
   visibility: hidden;
   opacity: 0;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .App {
   text-align: center;
   box-sizing: border-box;
@@ -113,7 +114,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
-/* line 59, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .App header {
   padding: 2rem 0rem;
   display: flex;
@@ -123,21 +124,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 2;
   width: 100%;
 }
-/* line 68, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .App header .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-grow: 2;
 }
-/* line 74, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .App header .title h1 {
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
   font-family: 'Orbitron', sans-serif;
 }
-/* line 81, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .App header .title h3 {
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -146,17 +147,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: 0.5rem;
   padding-right: 0.5rem;
 }
-/* line 91, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .App header button {
   flex-grow: 1;
   cursor: default;
 }
-/* line 97, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .App header button img {
   width: 100px;
   cursor: pointer;
 }
-/* line 104, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
+.App #settingsSidebar {
+  top: 0;
+  left: 0;
+  width: 25%;
+  bottom: 0;
+  position: fixed;
+  margin-top: 196px;
+  z-index: 3;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* line 120, ../sass/screen.scss */
+.App #settingsSidebar button {
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+}
+/* line 129, ../sass/screen.scss */
 .App #addFocusContainer {
   top: 0;
   right: 0;
@@ -166,7 +188,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: 196px;
   z-index: 3;
 }
-/* line 113, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .App #addFocusContainer .addFocusForm {
   height: 100%;
   width: 100%;
@@ -175,26 +197,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-direction: column;
   justify-content: space-between;
 }
-/* line 121, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .App #addFocusContainer .addFocusForm input {
   min-height: 2rem;
   width: 100%;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
-/* line 128, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .App #addFocusContainer .addFocusForm input[type="text"] {
-  font-size: 1.5rem;
   outline: none;
   border: none;
 }
-/* line 134, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .App #addFocusContainer .addFocusForm input[type="submit"] {
   text-transform: uppercase;
   padding: 0.8rem 2rem;
   border-radius: 10rem;
 }
-/* line 143, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .App .focusList {
   margin-top: 200px;
   margin-left: auto;
@@ -206,20 +227,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-direction: column;
   align-items: center;
 }
-/* line 154, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .App .focusList .noFocus {
   font-size: 2rem;
   margin-top: 9rem;
 }
-/* line 158, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .App .focusList .noFocus span {
   font-size: 3rem;
 }
-/* line 163, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .App .focusList .focus {
   width: 40%;
 }
-/* line 166, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .App .focusList .focus p {
   padding: 0.8rem 2rem;
   font-family: 'Montserrat', sans-serif;
@@ -230,7 +251,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   justify-content: space-between;
   align-items: center;
 }
-/* line 176, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .App .focusList .focus p input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -239,7 +260,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: 1rem;
   border-radius: 12px;
 }
-/* line 185, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .App .focusList .focus p button {
   margin-left: 1rem;
   font-weight: 900;
@@ -249,143 +270,164 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Light */
-/* line 200, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .light {
   background-color: #f6effc;
 }
-/* line 203, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .light header {
   background-color: #fff;
   border-bottom: 4px solid #7982e7;
 }
-/* line 211, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .light header h3 {
   color: #000;
 }
-/* line 216, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
+.light #settingsSidebar {
+  background-color: #fff;
+  border-right: 4px solid #7982e7;
+}
+/* line 244, ../sass/screen.scss */
+.light #settingsSidebar button {
+  background-color: #f6effc;
+  border: 2px solid #7982e7;
+}
+/* line 253, ../sass/screen.scss */
 .light #addFocusContainer {
   background-color: #fff;
   border-left: 4px solid #7982e7;
 }
-/* line 222, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .light #addFocusContainer .addFocusForm input[type="text"] {
   border-bottom: 2px solid #7982e7;
 }
-/* line 226, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 .light #addFocusContainer .addFocusForm input[type="submit"] {
   background-color: #f6effc;
   border: 2px solid #7982e7;
 }
-/* line 240, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 .light .focusList .noFocus span {
   color: #8a2be2;
 }
-/* line 245, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .light .focusList .completed {
   background-color: #7982e7;
   color: #fff;
 }
-/* line 249, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 .light .focusList .completed button {
   color: #fff;
 }
-/* line 254, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 .light .focusList p {
   color: #000;
   background-color: #fff;
   border: 2px solid #7982e7;
   button-color: #000;
 }
-/* line 258, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 .light .focusList p:hover {
   border: 2px solid transparent;
 }
-/* line 263, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 .light .focusList p input[type="checkbox"] {
   border: 1px solid #7982e7;
 }
-/* line 265, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .light .focusList p input[type="checkbox"]:hover {
   background-color: #7982e7;
 }
-/* line 268, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 .light .focusList p input[type="checkbox"]:checked {
   background-color: #7982e7;
 }
 
 /* Dark */
-/* line 282, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .dark {
   background-color: #300b51;
 }
-/* line 285, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .dark header {
   background-color: #000;
   border-bottom: 4px solid #00ffff;
 }
-/* line 293, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .dark header h3 {
   color: #fff;
 }
-/* line 298, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
+.dark #settingsSidebar {
+  background-color: #000;
+  border-right: 4px solid #00ffff;
+}
+/* line 339, ../sass/screen.scss */
+.dark #settingsSidebar button {
+  color: #fff;
+  background-color: #00004d;
+  border: 2px solid #00ffff;
+}
+/* line 349, ../sass/screen.scss */
 .dark #addFocusContainer {
   background-color: #000;
   border-left: 4px solid #00ffff;
 }
-/* line 304, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 .dark #addFocusContainer .addFocusForm input[type="text"] {
   color: #fff;
   background-color: #000;
   border-bottom: 2px solid #00ffff;
 }
-/* line 310, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 .dark #addFocusContainer .addFocusForm input[type="submit"] {
   border: 2px solid #00ffff;
   background-color: #00004d;
   color: #fff;
 }
-/* line 323, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 .dark .focusList .noFocus {
   color: #fff;
 }
-/* line 326, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 .dark .focusList .noFocus span {
   color: #00ffff;
 }
-/* line 331, ../sass/screen.scss */
+/* line 382, ../sass/screen.scss */
 .dark .focusList .completed {
   background-color: #00ffff;
   color: #000;
 }
-/* line 335, ../sass/screen.scss */
+/* line 386, ../sass/screen.scss */
 .dark .focusList .completed button {
   color: #000;
 }
-/* line 340, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 .dark .focusList p {
   color: #fff;
   background-color: #00004d;
   border: 2px solid #00ffff;
 }
-/* line 344, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .dark .focusList p:hover {
   border: 2px solid transparent;
 }
-/* line 349, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 .dark .focusList p input[type="checkbox"] {
   border: 1px solid #00ffff;
   background-color: #00004d;
 }
-/* line 352, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 .dark .focusList p input[type="checkbox"]:hover {
   background-color: #8a2be2;
   border: 1px solid transparent;
 }
-/* line 356, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 .dark .focusList p input[type="checkbox"]:checked {
   background-color: #00ffff;
 }
-/* line 361, ../sass/screen.scss */
+/* line 412, ../sass/screen.scss */
 .dark .focusList p button {
   color: #fff;
 }

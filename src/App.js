@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
+import SettingsSidebar from './components/SettingsSidebar'
 import AddFocusForm from './components/AddFocusForm'
 import FocusList from './components/FocusList'
 
@@ -57,6 +58,7 @@ class App extends Component {
     return (
       <div id="App" className="App light">
         <Header/>
+        <SettingsSidebar />
         <AddFocusForm
           addFocus={this.addFocus}
         />
