@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
 
-class NoReminders extends Component {
+class NoFocuses extends Component {
   render() {
     return (
-      <h2 className="noReminders">
-        Add a <span className="focus">FOCUS</span> to your life
+      <h2 className="noFocuses">
+        Add a <span>FOCUS</span> to your life
       </h2>
-    );
+    )
   }
 }
 
-class Reminder extends Component {
-  completed = () => {
-    if (this.props.completed) {
-      return 'completed'
-    }
-  }
+class Focus extends Component {
+  completed = () => this.props.completed ? 'completed' : ''
 
   render() {
-    const { id, title } = this.props;
+    const { id, title } = this.props
     return (
-      <div className="reminder">
+      <div className="focus">
         <p className={this.completed()}>
           <input
             type="checkbox"
@@ -29,58 +25,54 @@ class Reminder extends Component {
             onChange={this.props.toggleComplete.bind(this, id)}
           />
           {title}
-          <button onClick={this.props.deleteReminder.bind(this, id)}>X</button>
+          <button onClick={this.props.deleteFocus.bind(this, id)}>X</button>
         </p>
       </div>
-    );
+    )
   }
 }
 
-class ReminderList extends Component {
-  checkLength = length => {
-    if (length === 0) {
-      return <NoReminders />
-    }
-  }
+class FocusList extends Component {
+  checkLength = length => !length ? <NoFocuses /> : ''
 
   render() {
     return (
-      <div className="reminderList">
-        {this.checkLength(this.props.reminders.length)}
-        {this.props.reminders.map(reminder =>
-          <Reminder
-            key={reminder.id}
+      <div className="focusList">
+        {this.checkLength(this.props.focuses.length)}
+        {this.props.focuses.map(focus =>
+          <Focus
+            key={focus.id}
             toggleComplete={this.props.toggleComplete}
-            changeReminder={this.props.changeReminder}
-            deleteReminder={this.props.deleteReminder}
-            {...reminder}
+            changeFocus={this.props.changeFocus}
+            deleteFocus={this.props.deleteFocus}
+            {...focus}
           />
         )}
       </div>
-    );
+    )
   }
 }
 
-class AddReminderForm extends Component {
+class AddFocusForm extends Component {
   state = {
     title: ''
   }
 
-  handleChange = (event) => this.setState({ [event.target.name]: event.target.value });
+  handleChange = (event) => this.setState({ [event.target.name]: event.target.value })
 
   handleSubmit = (event) => {
-    document.getElementById('addReminderContainer').classList.add('invisible');
-    document.getElementById('addReminderForm').classList.add('invisible');
+    document.getElementById('addFocusContainer').classList.add('invisible')
+    document.getElementById('addFocusForm').classList.add('invisible')
 
-    event.preventDefault();
-    this.props.addReminder(this.state.title);
-    this.setState({ title: '' });
+    event.preventDefault()
+    this.props.addFocus(this.state.title)
+    this.setState({ title: '' })
   }
 
   render() {
     return (
-      <div onSubmit={this.handleSubmit} id="addReminderContainer" className="invisible">
-        <form id="addReminderForm" className="addReminderForm invisible">
+      <div onSubmit={this.handleSubmit} id="addFocusContainer" className="invisible">
+        <form id="addFocusForm" className="addFocusForm invisible">
           <input
             type="text"
             name="title"
@@ -99,60 +91,67 @@ class AddReminderForm extends Component {
   }
 }
 
-class AddReminder extends Component {
-  addForm = 'open';
+class AddFocus extends Component {
+  addForm = 'open'
 
   setOpen = () => {
-    document.getElementById('addReminderContainer').classList.remove('invisible');
-    document.getElementById('addReminderForm').classList.remove('invisible');
-    this.addForm = 'open';
+    document.getElementById('addFocusContainer').classList.remove('invisible')
+    document.getElementById('addFocusForm').classList.remove('invisible')
+    this.addForm = 'open'
   }
 
   setClose = () => {
-    document.getElementById('addReminderContainer').classList.add('invisible');
-    document.getElementById('addReminderForm').classList.add('invisible');
-    this.addForm = 'close';
+    document.getElementById('addFocusContainer').classList.add('invisible')
+    document.getElementById('addFocusForm').classList.add('invisible')
+    this.addForm = 'close'
   }
 
-  handleClick = () => {
-    this.addForm === 'open' ? this.setClose() : this.setOpen();
-  }
+  handleClick = () => this.addForm === 'open' ? this.setClose() : this.setOpen()
 
   render() {
     return (
       <button>
         <img onClick={this.handleClick} src="https://i.postimg.cc/nLftDrq2/add-256.png" alt="add"/>
       </button>
-    );
+    )
+  }
+}
+
+class Title extends Component {
+  render() {
+    return (
+      <div className="title">
+        <h1>Focus</h1>
+        <h3>On what drives you</h3>
+      </div>
+    )
   }
 }
 
 class Settings extends Component {
-  setting = 'light';
+  setting = 'light'
 
   setLight = () => {
-    document.getElementById('App').classList.remove('dark');
-    document.getElementById('App').classList.add('light');
-    this.settings = 'light';
+    document.getElementById('App').classList.remove('dark')
+    document.getElementById('App').classList.add('light')
+    this.settings = 'light'
   }
 
 
   setDark = () => {
-    document.getElementById('App').classList.remove('light');
-    document.getElementById('App').classList.add('dark');
-    this.settings = 'dark';
+    document.getElementById('App').classList.remove('light')
+    document.getElementById('App').classList.add('dark')
+    this.settings = 'dark'
   }
 
-  handleClick = () => {
-    this.settings === 'light' ? this.setDark() : this.setLight();
-  }
+  handleClick = () => this.settings === 'light' ? this.setDark() : this.setLight()
 
   render () {
     return (
       <button>
        <img onClick={this.handleClick} src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="settings" />
       </button>
-    );
+    )
   }
 }
 
@@ -160,20 +159,17 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <Settings/>
-        <div className="title">
-          <h1>Focus</h1>
-          <h3>On what drives you</h3>
-        </div>
-        <AddReminder/>
+        <Settings />
+        <Title />
+        <AddFocus />
       </header>
-    );
+    )
   }
 }
 
 class App extends Component {
   state = {
-    reminders: [
+    focuses: [
       {id: 1, title: 'Take out trash', completed: false },
       {id: 2, title: 'Get groceries', completed: false },
       {id: 3, title: 'Wash dishes', completed: false },
@@ -187,57 +183,55 @@ class App extends Component {
       {id: 11, title: 'Wash dishes', completed: false },
       {id: 12, title: 'Clean closet', completed: false },
     ]
-  };
+  }
 
-  randomId = () => {
-    return Math.floor(Math.random() * 1000);
-  };
+  randomId = () => Math.floor(Math.random() * 1000)
 
-  addReminder = title => {
-    const newReminder = {
+  addFocus = title => {
+    const newFocus = {
       id: this.randomId(),
       title,
       completed: false
-    };
-    this.setState({ reminders: [...this.state.reminders, newReminder] });
-  };
+    }
+    this.setState({ focuses: [newFocus, ...this.state.focuses] })
+  }
 
   toggleComplete = id => {
     this.setState({
-      reminders: this.state.reminders.map(reminder => {
-        if (reminder.id === id) {
-          reminder.completed = !reminder.completed;
+      focuses: this.state.focuses.map(focus => {
+        if (focus.id === id) {
+          focus.completed = !focus.completed;
         }
-        return reminder;
+        return focus;
       }).sort((a, b) => a.completed - b.completed)
-    });
-  };
+    })
+  }
 
-  changeReminder = title => {
+  changeFocus = title => {
     console.log(title)
-  };
+  }
 
-  deleteReminder = id => {
+  deleteFocus = id => {
     this.setState({
-      reminders: [...this.state.reminders.filter(reminder => reminder.id !== id)]
-    });
-  };
+      focuses: [...this.state.focuses.filter(focus => focus.id !== id)]
+    })
+  }
 
   render() {
     return (
       <div id="App" className="App light">
         <Header/>
-        <AddReminderForm
-          addReminder={this.addReminder}
+        <AddFocusForm
+          addFocus={this.addFocus}
         />
-        <ReminderList
-          reminders={this.state.reminders}
+        <FocusList
+          focuses={this.state.focuses}
           toggleComplete={this.toggleComplete}
-          changeReminder={this.changeReminder}
-          deleteReminder={this.deleteReminder}
+          changeFocus={this.changeFocus}
+          deleteFocus={this.deleteFocus}
         />
       </div>
-    );
+    )
   }
 }
 

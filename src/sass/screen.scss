@@ -101,7 +101,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  #addReminderContainer {
+  #addFocusContainer {
     top: 0;
     right: 0;
     width: 25%;
@@ -110,7 +110,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     margin-top: 196px;
     z-index: 3;
 
-    .addReminderForm {
+    .addFocusForm {
       height: 100%;
       width: 100%;
       padding: 2rem;
@@ -140,7 +140,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  .reminderList {
+  .focusList {
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -155,12 +155,12 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       font-size: 2rem;
       margin-top: 9rem;
 
-      .focus {
+      span {
         font-size: 3rem;
       }
     }
 
-    .reminder {
+    .focus {
       width: 40%;
 
       p {
@@ -213,11 +213,11 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  #addReminderContainer {
+  #addFocusContainer {
     background-color: $white;
     border-left: 4px solid $light-primary-color;
 
-    .addReminderForm {
+    .addFocusForm {
 
       input[type="text"] {
         border-bottom: 2px solid $light-primary-color;
@@ -233,11 +233,11 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  .reminderList {
+  .focusList {
 
     .noFocuses {
 
-      .focus {
+      span {
         color: $primary-color;
       }
     }
@@ -295,11 +295,11 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  #addReminderContainer {
+  #addFocusContainer {
     background-color: $black;
     border-left: 4px solid $secondary-color;
 
-    .addReminderForm {
+    .addFocusForm {
 
       input[type="text"] {
         color: $white;
@@ -318,12 +318,12 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  .reminderList {
+  .focusList {
 
     .noFocuses {
       color: $white;
 
-      .focus {
+      span {
         color: $secondary-color;
       }
     }

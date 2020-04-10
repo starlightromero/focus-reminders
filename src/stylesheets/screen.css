@@ -81,17 +81,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 30, ../sass/screen.scss */
-.light #addReminderContainer .addReminderForm input[type="submit"]:hover, .light .reminderList p:hover, .dark #addReminderContainer .addReminderForm input[type="submit"]:hover {
+.light #addFocusContainer .addFocusForm input[type="submit"]:hover, .light .focusList p:hover, .dark #addFocusContainer .addFocusForm input[type="submit"]:hover {
   background-image: linear-gradient(to right, #66ffff, #7982e7, #66ffff);
 }
 
 /* line 34, ../sass/screen.scss */
-.dark .reminderList p:hover {
+.dark .focusList p:hover {
   background-image: linear-gradient(to right, #66ffff, #8a2be2, #66ffff);
 }
 
 /* line 38, ../sass/screen.scss */
-.App header button, .App #addReminderContainer .addReminderForm input[type="submit"], .App .reminderList .reminder p button {
+.App header button, .App #addFocusContainer .addFocusForm input[type="submit"], .App .focusList .focus p button {
   border: none;
   background-color: transparent;
   padding: 0;
@@ -157,7 +157,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   cursor: pointer;
 }
 /* line 104, ../sass/screen.scss */
-.App #addReminderContainer {
+.App #addFocusContainer {
   top: 0;
   right: 0;
   width: 25%;
@@ -167,7 +167,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 3;
 }
 /* line 113, ../sass/screen.scss */
-.App #addReminderContainer .addReminderForm {
+.App #addFocusContainer .addFocusForm {
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -176,26 +176,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   justify-content: space-between;
 }
 /* line 121, ../sass/screen.scss */
-.App #addReminderContainer .addReminderForm input {
+.App #addFocusContainer .addFocusForm input {
   min-height: 2rem;
   width: 100%;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 /* line 128, ../sass/screen.scss */
-.App #addReminderContainer .addReminderForm input[type="text"] {
+.App #addFocusContainer .addFocusForm input[type="text"] {
   font-size: 1.5rem;
   outline: none;
   border: none;
 }
 /* line 134, ../sass/screen.scss */
-.App #addReminderContainer .addReminderForm input[type="submit"] {
+.App #addFocusContainer .addFocusForm input[type="submit"] {
   text-transform: uppercase;
   padding: 0.8rem 2rem;
   border-radius: 10rem;
 }
 /* line 143, ../sass/screen.scss */
-.App .reminderList {
+.App .focusList {
   margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -207,20 +207,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   align-items: center;
 }
 /* line 154, ../sass/screen.scss */
-.App .reminderList .noFocuses {
+.App .focusList .noFocuses {
   font-size: 2rem;
   margin-top: 9rem;
 }
 /* line 158, ../sass/screen.scss */
-.App .reminderList .noFocuses .focus {
+.App .focusList .noFocuses span {
   font-size: 3rem;
 }
 /* line 163, ../sass/screen.scss */
-.App .reminderList .reminder {
+.App .focusList .focus {
   width: 40%;
 }
 /* line 166, ../sass/screen.scss */
-.App .reminderList .reminder p {
+.App .focusList .focus p {
   padding: 0.8rem 2rem;
   font-family: 'Montserrat', sans-serif;
   margin: 1rem;
@@ -231,7 +231,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   align-items: center;
 }
 /* line 176, ../sass/screen.scss */
-.App .reminderList .reminder p input[type="checkbox"] {
+.App .focusList .focus p input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   height: 1.5rem;
@@ -240,7 +240,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 12px;
 }
 /* line 185, ../sass/screen.scss */
-.App .reminderList .reminder p button {
+.App .focusList .focus p button {
   margin-left: 1rem;
   font-weight: 900;
   padding: 5px 7px;
@@ -263,53 +263,53 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #000;
 }
 /* line 216, ../sass/screen.scss */
-.light #addReminderContainer {
+.light #addFocusContainer {
   background-color: #fff;
   border-left: 4px solid #7982e7;
 }
 /* line 222, ../sass/screen.scss */
-.light #addReminderContainer .addReminderForm input[type="text"] {
+.light #addFocusContainer .addFocusForm input[type="text"] {
   border-bottom: 2px solid #7982e7;
 }
 /* line 226, ../sass/screen.scss */
-.light #addReminderContainer .addReminderForm input[type="submit"] {
+.light #addFocusContainer .addFocusForm input[type="submit"] {
   background-color: #f6effc;
   border: 2px solid #7982e7;
 }
 /* line 240, ../sass/screen.scss */
-.light .reminderList .noFocuses .focus {
+.light .focusList .noFocuses span {
   color: #8a2be2;
 }
 /* line 245, ../sass/screen.scss */
-.light .reminderList .completed {
+.light .focusList .completed {
   background-color: #7982e7;
   color: #fff;
 }
 /* line 249, ../sass/screen.scss */
-.light .reminderList .completed button {
+.light .focusList .completed button {
   color: #fff;
 }
 /* line 254, ../sass/screen.scss */
-.light .reminderList p {
+.light .focusList p {
   color: #000;
   background-color: #fff;
   border: 2px solid #7982e7;
   button-color: #000;
 }
 /* line 258, ../sass/screen.scss */
-.light .reminderList p:hover {
+.light .focusList p:hover {
   border: 2px solid transparent;
 }
 /* line 263, ../sass/screen.scss */
-.light .reminderList p input[type="checkbox"] {
+.light .focusList p input[type="checkbox"] {
   border: 1px solid #7982e7;
 }
 /* line 265, ../sass/screen.scss */
-.light .reminderList p input[type="checkbox"]:hover {
+.light .focusList p input[type="checkbox"]:hover {
   background-color: #7982e7;
 }
 /* line 268, ../sass/screen.scss */
-.light .reminderList p input[type="checkbox"]:checked {
+.light .focusList p input[type="checkbox"]:checked {
   background-color: #7982e7;
 }
 
@@ -328,64 +328,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #fff;
 }
 /* line 298, ../sass/screen.scss */
-.dark #addReminderContainer {
+.dark #addFocusContainer {
   background-color: #000;
   border-left: 4px solid #00ffff;
 }
 /* line 304, ../sass/screen.scss */
-.dark #addReminderContainer .addReminderForm input[type="text"] {
+.dark #addFocusContainer .addFocusForm input[type="text"] {
   color: #fff;
   background-color: #000;
   border-bottom: 2px solid #00ffff;
 }
 /* line 310, ../sass/screen.scss */
-.dark #addReminderContainer .addReminderForm input[type="submit"] {
+.dark #addFocusContainer .addFocusForm input[type="submit"] {
   border: 2px solid #00ffff;
   background-color: #00004d;
   color: #fff;
 }
 /* line 323, ../sass/screen.scss */
-.dark .reminderList .noFocuses {
+.dark .focusList .noFocuses {
   color: #fff;
 }
 /* line 326, ../sass/screen.scss */
-.dark .reminderList .noFocuses .focus {
+.dark .focusList .noFocuses span {
   color: #00ffff;
 }
 /* line 331, ../sass/screen.scss */
-.dark .reminderList .completed {
+.dark .focusList .completed {
   background-color: #00ffff;
   color: #000;
 }
 /* line 335, ../sass/screen.scss */
-.dark .reminderList .completed button {
+.dark .focusList .completed button {
   color: #000;
 }
 /* line 340, ../sass/screen.scss */
-.dark .reminderList p {
+.dark .focusList p {
   color: #fff;
   background-color: #00004d;
   border: 2px solid #00ffff;
 }
 /* line 344, ../sass/screen.scss */
-.dark .reminderList p:hover {
+.dark .focusList p:hover {
   border: 2px solid transparent;
 }
 /* line 349, ../sass/screen.scss */
-.dark .reminderList p input[type="checkbox"] {
+.dark .focusList p input[type="checkbox"] {
   border: 1px solid #00ffff;
   background-color: #00004d;
 }
 /* line 352, ../sass/screen.scss */
-.dark .reminderList p input[type="checkbox"]:hover {
+.dark .focusList p input[type="checkbox"]:hover {
   background-color: #8a2be2;
   border: 1px solid transparent;
 }
 /* line 356, ../sass/screen.scss */
-.dark .reminderList p input[type="checkbox"]:checked {
+.dark .focusList p input[type="checkbox"]:checked {
   background-color: #00ffff;
 }
 /* line 361, ../sass/screen.scss */
-.dark .reminderList p button {
+.dark .focusList p button {
   color: #fff;
 }
