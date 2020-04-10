@@ -5,9 +5,16 @@ import NoFocus from './NoFocus'
 class FocusList extends Component {
   checkLength = length => !length ? <NoFocus /> : ''
 
+  handleClick = () => {
+    document.getElementById('settingsSidebar').classList.add('invisible')
+    document.getElementById('addFocusContainer').classList.add('invisible')
+    document.getElementById('addFocusForm').classList.add('invisible')
+    document.getElementById('aboutFocus').classList.add('invisible')
+  }
+
   render() {
     return (
-      <div className="focusList">
+      <div className="focusList" onClick={this.handleClick}>
         {this.checkLength(this.props.focuses.length)}
         {this.props.focuses.map(focus =>
           <FocusItem

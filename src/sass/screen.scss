@@ -10,7 +10,7 @@ $light-background-color: #f6effc;
 $dark-primary-color: #00004d;
 $dark-background-color: #300b51;
 $white: #fff;
-$white-faded: hsla(0, 0%, 40%, 0.6);
+$white-faded: hsla(0, 0%, 100%, 0.7);
 $black: #000;
 $black-faded: hsla(0, 0%, 0%, 0.6);
 
@@ -102,6 +102,37 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
         width: 100px;
         cursor: pointer;
       }
+    }
+  }
+
+  #aboutFocus {
+    @extend %gradient-background-light;
+    margin-top: 196px;
+    width: 50%;
+    top: 0;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3em;
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4.5rem;
+      color: $white;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    p {
+      font-size: 1.5rem;
     }
   }
 
