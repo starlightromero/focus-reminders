@@ -3,39 +3,37 @@
 /* Colors */
 
 $primary-color: #8a2be2;
-$secondary-color: #00ffff;
 $light-primary-color: #7982e7;
-$light-secondary-color: #66ffff;
+$light-dark-secondary-color: #66ffff;
 $light-background-color: #f6effc;
 $dark-primary-color: #00004d;
+$dark-secondary-color: #00ffff;
 $dark-background-color: #300b51;
 $white: #fff;
-$white-faded: hsla(0, 0%, 100%, 0.7);
 $black: #000;
-$black-faded: hsla(0, 0%, 0%, 0.6);
 
 /* Extentions */
 
 %gradient-color-light {
-  background-image: linear-gradient(to right, $white, $primary-color, $secondary-color, $white);
+  background-image: linear-gradient(to right, $white, $primary-color, $dark-secondary-color, $white);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 %gradient-color-dark {
-  background-image: linear-gradient(to right, $black, $primary-color, $secondary-color, $black);
+  background-image: linear-gradient(to right, $black, $primary-color, $dark-secondary-color, $black);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 %gradient-background-light {
-  background-image: linear-gradient(to right, $light-secondary-color, $light-primary-color, $light-secondary-color);
+  background-image: linear-gradient(to right, $light-dark-secondary-color, $light-primary-color, $light-dark-secondary-color);
 }
 
 %gradient-background-dark {
-  background-image: linear-gradient(to right, $light-secondary-color, $primary-color, $light-secondary-color);
+  background-image: linear-gradient(to right, $light-dark-secondary-color, $primary-color, $light-dark-secondary-color);
 }
 
 %button {
@@ -123,7 +121,6 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 4.5rem;
-      color: $white;
     }
 
     h3 {
@@ -132,7 +129,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -158,7 +155,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  #addFocusContainer {
+  #addFocusSidebar {
     top: 0;
     right: 0;
     width: 25%;
@@ -249,6 +246,17 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       }
     }
   }
+
+  footer {
+    z-index: 2;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 1px;
+    border-top: 4px solid $light-primary-color;
+    background-color: $white;
+  }
+
 }
 
 /* Light */
@@ -269,6 +277,14 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
+  #aboutFocus {
+    background-image: linear-gradient(to right, hsla(275, 66%, 96%, 1) 20%, $light-primary-color 50%, hsla(275, 66%, 96%, 1) 80%);
+
+    h1 {
+      color: $white;
+    }
+  }
+
   #settingsSidebar {
     background-color: $white;
     border-right: 4px solid $light-primary-color;
@@ -282,7 +298,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
-  #addFocusContainer {
+  #addFocusSidebar {
     background-color: $white;
     border-left: 4px solid $light-primary-color;
 
@@ -353,7 +369,7 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
 
   header {
     background-color: $black;
-    border-bottom: 4px solid $secondary-color;
+    border-bottom: 4px solid $dark-secondary-color;
 
     h1 {
       @extend %gradient-color-dark;
@@ -364,34 +380,50 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     }
   }
 
+  #aboutFocus {
+    background-image: linear-gradient(to right, hsl(271, 76%, 18%) 25%, $dark-secondary-color 50%, hsl(271, 76%, 18%) 75%);
+
+    h1 {
+      color: $dark-primary-color;
+    }
+
+    h3 {
+      color: $white;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+
   #settingsSidebar {
     background-color: $black;
-    border-right: 4px solid $secondary-color;
+    border-right: 4px solid $dark-secondary-color;
 
     button {
       color: $white;
       background-color: $dark-primary-color;
-      border: 2px solid $secondary-color;
+      border: 2px solid $dark-secondary-color;
       &:hover {
         @extend %gradient-background-dark;
       }
     }
   }
 
-  #addFocusContainer {
+  #addFocusSidebar {
     background-color: $black;
-    border-left: 4px solid $secondary-color;
+    border-left: 4px solid $dark-secondary-color;
 
     .addFocusForm {
 
       input[type="text"] {
         color: $white;
         background-color: $black;
-        border-bottom: 2px solid $secondary-color;
+        border-bottom: 2px solid $dark-secondary-color;
       }
 
       input[type="submit"] {
-        border: 2px solid $secondary-color;
+        border: 2px solid $dark-secondary-color;
         background-color: $dark-primary-color;
         color: $white;
         &:hover {
@@ -407,12 +439,12 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
       color: $white;
 
       span {
-        color: $secondary-color;
+        color: $dark-secondary-color;
       }
     }
 
     .completed {
-      background-color: $secondary-color;
+      background-color: $dark-secondary-color;
       color: $black;
 
       button {
@@ -423,21 +455,21 @@ $black-faded: hsla(0, 0%, 0%, 0.6);
     p {
       color: $white;
       background-color: $dark-primary-color;
-      border: 2px solid $secondary-color;
+      border: 2px solid $dark-secondary-color;
       &:hover {
         @extend %gradient-background-dark;
         border: 2px solid transparent;
       }
 
       input[type="checkbox"] {
-        border: 1px solid $secondary-color;
+        border: 1px solid $dark-secondary-color;
         background-color: $dark-primary-color;
         &:hover {
           background-color: $primary-color;
           border: 1px solid transparent;
         }
         &:checked {
-          background-color: $secondary-color;
+          background-color: $dark-secondary-color;
         }
       }
 

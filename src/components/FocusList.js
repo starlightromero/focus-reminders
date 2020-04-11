@@ -7,7 +7,7 @@ class FocusList extends Component {
 
   handleClick = () => {
     document.getElementById('settingsSidebar').classList.add('invisible')
-    document.getElementById('addFocusContainer').classList.add('invisible')
+    document.getElementById('addFocusSidebar').classList.add('invisible')
     document.getElementById('addFocusForm').classList.add('invisible')
     document.getElementById('aboutFocus').classList.add('invisible')
   }

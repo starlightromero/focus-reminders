@@ -8,7 +8,7 @@ class AddFocusSidebar extends Component {
   handleChange = (event) => this.setState({ [event.target.name]: event.target.value })
 
   handleSubmit = (event) => {
-    document.getElementById('addFocusContainer').classList.add('invisible')
+    document.getElementById('addFocusSidebar').classList.add('invisible')
     document.getElementById('addFocusForm').classList.add('invisible')
 
     event.preventDefault()
@@ -18,7 +18,7 @@ class AddFocusSidebar extends Component {
 
   render() {
     return (
-      <div onSubmit={this.handleSubmit} id="addFocusContainer" className="invisible">
+      <div onSubmit={this.handleSubmit} id="addFocusSidebar" className="invisible">
         <form id="addFocusForm" className="addFocusForm invisible">
           <input
             type="text"

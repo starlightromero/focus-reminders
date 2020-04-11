@@ -4,6 +4,7 @@ import AboutFocus from './components/AboutFocus'
 import SettingsSidebar from './components/SettingsSidebar'
 import AddFocusSidebar from './components/AddFocusSidebar'
 import FocusList from './components/FocusList'
+import Footer from './components/Footer'
 
 class App extends Component {
   state = {
@@ -70,6 +71,7 @@ class App extends Component {
           changeFocus={this.changeFocus}
           deleteFocus={this.deleteFocus}
         />
+        <Footer />
       </div>
     )
   }
