@@ -6,7 +6,7 @@ import AddFocus from './AddFocus'
 class Header extends Component {
   render() {
     return (
-      <header id="header" onScroll={this.handleScroll}>
+      <header id="header">
         <Settings />
         <Title />
         <AddFocus />
