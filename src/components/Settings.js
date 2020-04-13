@@ -4,7 +4,6 @@ class Settings extends Component {
   sidebar = 'close'
 
   setOpen = () => {
-    document.getElementById('settings').classList.remove('click')
     document.getElementById('settingsSidebar').classList.remove('slideOutLeft')
     document.getElementById('settingsList').classList.remove('slideOutLeft')
     document.getElementById('settings').classList.remove('rotateLeft')
@@ -17,7 +16,6 @@ class Settings extends Component {
   }
 
   setClose = () => {
-    document.getElementById('settings').classList.remove('click')
     document.getElementById('settingsSidebar').classList.remove('slideInLeft')
     document.getElementById('settingsList').classList.remove('slideInLeft')
     document.getElementById('settings').classList.remove('rotateRight')

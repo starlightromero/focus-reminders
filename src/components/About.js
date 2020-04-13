@@ -7,6 +7,13 @@ class About extends Component {
     document.getElementById('aboutFocus').classList.remove('invisible')
     document.getElementById('aboutFocus').classList.remove('fadeOut')
     document.getElementById('aboutFocus').classList.add('fadeIn')
+    
+    document.getElementById('settingsSidebar').classList.remove('slideInLeft')
+    document.getElementById('settingsList').classList.remove('slideInLeft')
+    document.getElementById('settings').classList.remove('rotateRight')
+    document.getElementById('settingsSidebar').classList.add('slideOutLeft')
+    document.getElementById('settingsList').classList.add('slideOutLeft')
+    document.getElementById('settings').classList.add('rotateLeft')
     this.aboutFocus = 'open'
   }
 

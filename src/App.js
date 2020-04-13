@@ -20,7 +20,9 @@ class App extends Component {
       {id: 9, title: 'Take out trash', completed: false },
       {id: 10, title: 'Get groceries', completed: false },
       {id: 11, title: 'Wash dishes', completed: false },
-    ]
+    ],
+    settingsOpen: false,
+    addFocusOpen: false
   }
 
   randomId = () => Math.floor(Math.random() * 1000)
@@ -39,6 +41,7 @@ class App extends Component {
       focuses: this.state.focuses.map(focus => {
         if (focus.id === id) {
           focus.completed = !focus.completed
+          console.log(document.getElementById({id}))
         }
         return focus
       }).sort((a, b) => a.completed - b.completed)

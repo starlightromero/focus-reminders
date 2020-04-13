@@ -4,7 +4,6 @@ class Add extends Component {
   addForm = 'close'
 
   setOpen = () => {
-    document.getElementById('add').classList.remove('click')
     document.getElementById('addFocusSidebar').classList.remove('slideOutRight')
     document.getElementById('addFocusForm').classList.remove('slideOutRight')
     document.getElementById('add').classList.remove('rotateRight')
@@ -17,7 +16,6 @@ class Add extends Component {
   }
 
   setClose = () => {
-    document.getElementById('add').classList.remove('click')
     document.getElementById('addFocusSidebar').classList.remove('slideInRight')
     document.getElementById('addFocusForm').classList.remove('slideInRight')
     document.getElementById('add').classList.remove('rotateLeft')
