@@ -6,7 +6,7 @@ class FocusItem extends Component {
   render() {
     const { id, title } = this.props
     return (
-      <div className="focusItem animated flipInX">
+      <div className="focusItem flipIn">
         <p className={this.completed()}>
           <input
             type="checkbox"

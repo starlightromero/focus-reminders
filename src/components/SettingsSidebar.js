@@ -6,8 +6,10 @@ class SettingsSidebar extends Component {
   render () {
     return (
       <div id="settingsSidebar" className="invisible">
-        <SwitchMode />
-        <About />
+        <div id="settingsList" className="settingsList invisible">
+          <SwitchMode />
+          <About />
+        </div>
       </div>
     )
   }
