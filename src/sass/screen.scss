@@ -71,6 +71,7 @@ $black: #000;
       flex-direction: column;
       justify-content: center;
       flex-grow: 2;
+      cursor: default;
 
       h1 {
         font-size: 4rem;
@@ -391,7 +392,7 @@ $black: #000;
     background-image: linear-gradient(to right, hsl(271, 76%, 18%) 25%, $dark-secondary-color 50%, hsl(271, 76%, 18%) 75%);
 
     h1 {
-      color: $dark-primary-color;
+      color: $dark-secondary-color;
     }
 
     h3 {
@@ -499,7 +500,7 @@ $black: #000;
   animation-fill-mode: both;
 }
 
-/* FadeIn */
+/* Fade In */
 
 @-webkit-keyframes fadeIn {
   from {
@@ -525,8 +526,38 @@ $black: #000;
   @extend %animated;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+}
+
+/* Fade Out */
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  @extend %animated;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
 }
 
 /* Flip In */

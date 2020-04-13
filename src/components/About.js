@@ -5,11 +5,14 @@ class About extends Component {
 
   setOpen = () => {
     document.getElementById('aboutFocus').classList.remove('invisible')
+    document.getElementById('aboutFocus').classList.remove('fadeOut')
+    document.getElementById('aboutFocus').classList.add('fadeIn')
     this.aboutFocus = 'open'
   }
 
   setClose = () => {
-    document.getElementById('aboutFocus').classList.add('invisible')
+    document.getElementById('aboutFocus').classList.remove('fadeIn')
+    document.getElementById('aboutFocus').classList.add('fadeOut')
     this.aboutFocus = 'close'
   }
 
