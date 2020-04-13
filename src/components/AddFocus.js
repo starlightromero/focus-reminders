@@ -4,13 +4,13 @@ class AddFocus extends Component {
   addForm = 'close'
 
   setOpen = () => {
-    document.getElementById('addFocusContainer').classList.remove('invisible')
+    document.getElementById('addFocusSidebar').classList.remove('invisible')
     document.getElementById('addFocusForm').classList.remove('invisible')
     this.addForm = 'open'
   }
 
   setClose = () => {
-    document.getElementById('addFocusContainer').classList.add('invisible')
+    document.getElementById('addFocusSidebar').classList.add('invisible')
     document.getElementById('addFocusForm').classList.add('invisible')
     this.addForm = 'close'
   }
