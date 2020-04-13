@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Settings from './Settings'
 import Title from './Title'
-import AddFocus from './AddFocus'
+import Add from './Add'
 
 class Header extends Component {
   render() {
@@ -9,7 +9,7 @@ class Header extends Component {
       <header id="header">
         <Settings />
         <Title />
-        <AddFocus />
+        <Add />
       </header>
     )
   }

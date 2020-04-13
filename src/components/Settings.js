@@ -15,10 +15,20 @@ class Settings extends Component {
 
   handleClick = () => this.sidebar === 'open' ? this.setClose() : this.setOpen()
 
+  handleMouseOver = () => document.getElementById('settings').classList.add('rotateRight')
+
+  handleMouseLeave = () => document.getElementById('settings').classList.remove('rotateRight')
+
   render() {
     return (
       <button>
-        <img onClick={this.handleClick} src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="add"/>
+        <img
+          id="settings"
+          className="animated"
+          onMouseOver={this.handleMouseOver}
+          onMouseLeave={this.handleMouseLeave}
+          onClick={this.handleClick} src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="add"
+        />
       </button>
     )
   }

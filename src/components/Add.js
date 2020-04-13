@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class AddFocus extends Component {
+class Add extends Component {
   addForm = 'close'
 
   setOpen = () => {
@@ -17,13 +17,23 @@ class AddFocus extends Component {
 
   handleClick = () => this.addForm === 'open' ? this.setClose() : this.setOpen()
 
+  handleMouseOver = () => document.getElementById('add').classList.add('rotateLeft')
+
+  handleMouseLeave = () => document.getElementById('add').classList.remove('rotateLeft')
+
   render() {
     return (
       <button>
-        <img onClick={this.handleClick} src="https://i.postimg.cc/nLftDrq2/add-256.png" alt="add"/>
+        <img
+          id="add"
+          className="animated"
+          onMouseOver={this.handleMouseOver}
+          onMouseLeave={this.handleMouseLeave}
+          onClick={this.handleClick} src="https://i.postimg.cc/nLftDrq2/add-256.png" alt="add"
+        />
       </button>
     )
   }
 }
 
-export default AddFocus
+export default Add
