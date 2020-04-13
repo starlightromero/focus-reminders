@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import add from '../assets/add.png'
 
 class Add extends Component {
   addForm = 'close'
@@ -32,7 +33,7 @@ class Add extends Component {
       <button>
         <img
           id="add"
-          onClick={this.handleClick} src="https://i.postimg.cc/nLftDrq2/add-256.png" alt="add"
+          onClick={this.handleClick} src={add} alt="add"
         />
       </button>
     )

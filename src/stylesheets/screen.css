@@ -251,8 +251,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 10rem;
 }
 /* line 201, ../sass/screen.scss */
+.App .search {
+  z-index: 1;
+  margin: 210px auto auto auto;
+  display: flex;
+}
+/* line 206, ../sass/screen.scss */
+.App .search img {
+  height: 100px;
+  cursor: pointer;
+}
+/* line 212, ../sass/screen.scss */
 .App .focusList {
-  margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
@@ -262,20 +272,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-direction: column;
   align-items: center;
 }
-/* line 212, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .App .focusList .noFocus {
   font-size: 2rem;
   margin-top: 9rem;
 }
-/* line 216, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .App .focusList .noFocus span {
   font-size: 3rem;
 }
-/* line 221, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 .App .focusList .focusItem {
   width: 40%;
 }
-/* line 224, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .App .focusList .focusItem p {
   padding: 0.8rem 2rem;
   font-family: 'Montserrat', sans-serif;
@@ -286,7 +296,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   justify-content: space-between;
   align-items: center;
 }
-/* line 234, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .App .focusList .focusItem p input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -295,7 +305,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: 1rem;
   border-radius: 12px;
 }
-/* line 243, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .App .focusList .focusItem p button {
   margin-left: 1rem;
   font-weight: 900;
@@ -303,7 +313,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border: 2px solid transparent;
   border-radius: 100%;
 }
-/* line 255, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .App footer {
   z-index: 2;
   bottom: 0;
@@ -315,194 +325,194 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Light */
-/* line 269, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 .light {
   background-color: #f6effc;
 }
-/* line 272, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 .light header {
   background-color: #fff;
   border-bottom: 4px solid #7982e7;
 }
-/* line 280, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 .light header h3 {
   color: #000;
 }
-/* line 285, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .light #aboutFocus {
   background-image: linear-gradient(to right, #f6eefc 20%, #7982e7 50%, #f6eefc 80%);
 }
-/* line 288, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .light #aboutFocus h1 {
   color: #fff;
 }
-/* line 293, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 .light #settingsSidebar {
   background-color: #fff;
   border-right: 4px solid #7982e7;
 }
-/* line 299, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 .light #settingsSidebar .settingsList button {
   background-color: #f6effc;
   border: 2px solid #7982e7;
 }
-/* line 309, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 .light #addFocusSidebar {
   background-color: #fff;
   border-left: 4px solid #7982e7;
 }
-/* line 315, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 .light #addFocusSidebar .addFocusForm input[type="text"] {
   border-bottom: 2px solid #7982e7;
 }
-/* line 319, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .light #addFocusSidebar .addFocusForm input[type="submit"] {
   background-color: #f6effc;
   border: 2px solid #7982e7;
 }
-/* line 333, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 .light .focusList .noFocus span {
   color: #8a2be2;
 }
-/* line 338, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 .light .focusList .completed {
   background-color: #7982e7;
   color: #fff;
 }
-/* line 342, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .light .focusList .completed button {
   color: #fff;
 }
-/* line 347, ../sass/screen.scss */
+/* line 358, ../sass/screen.scss */
 .light .focusList p {
   color: #000;
   background-color: #fff;
   border: 2px solid #7982e7;
   button-color: #000;
 }
-/* line 351, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .light .focusList p:hover {
   border: 2px solid transparent;
 }
-/* line 356, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 .light .focusList p input[type="checkbox"] {
   border: 1px solid #7982e7;
 }
-/* line 358, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 .light .focusList p input[type="checkbox"]:hover {
   background-color: #7982e7;
 }
-/* line 361, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 .light .focusList p input[type="checkbox"]:checked {
   background-color: #7982e7;
 }
 
 /* Dark */
-/* line 375, ../sass/screen.scss */
+/* line 386, ../sass/screen.scss */
 .dark {
   background-color: #300b51;
 }
-/* line 378, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 .dark header {
   background-color: #000;
   border-bottom: 4px solid #00ffff;
 }
-/* line 386, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 .dark header h3 {
   color: #fff;
 }
-/* line 391, ../sass/screen.scss */
+/* line 402, ../sass/screen.scss */
 .dark #aboutFocus {
   background-image: linear-gradient(to right, #2f0b51 25%, #00ffff 50%, #2f0b51 75%);
 }
-/* line 394, ../sass/screen.scss */
+/* line 405, ../sass/screen.scss */
 .dark #aboutFocus h1 {
   color: #00ffff;
 }
-/* line 398, ../sass/screen.scss */
+/* line 409, ../sass/screen.scss */
 .dark #aboutFocus h3 {
   color: #fff;
 }
-/* line 402, ../sass/screen.scss */
+/* line 413, ../sass/screen.scss */
 .dark #aboutFocus p {
   color: #fff;
 }
-/* line 407, ../sass/screen.scss */
+/* line 418, ../sass/screen.scss */
 .dark #settingsSidebar {
   background-color: #000;
   border-right: 4px solid #00ffff;
 }
-/* line 413, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 .dark #settingsSidebar .settingsList button {
   color: #fff;
   background-color: #00004d;
   border: 2px solid #00ffff;
 }
-/* line 424, ../sass/screen.scss */
+/* line 435, ../sass/screen.scss */
 .dark #addFocusSidebar {
   background-color: #000;
   border-left: 4px solid #00ffff;
 }
-/* line 430, ../sass/screen.scss */
+/* line 441, ../sass/screen.scss */
 .dark #addFocusSidebar .addFocusForm input[type="text"] {
   color: #fff;
   background-color: #000;
   border-bottom: 2px solid #00ffff;
 }
-/* line 436, ../sass/screen.scss */
+/* line 447, ../sass/screen.scss */
 .dark #addFocusSidebar .addFocusForm input[type="submit"] {
   border: 2px solid #00ffff;
   background-color: #00004d;
   color: #fff;
 }
-/* line 449, ../sass/screen.scss */
+/* line 460, ../sass/screen.scss */
 .dark .focusList .noFocus {
   color: #fff;
 }
-/* line 452, ../sass/screen.scss */
+/* line 463, ../sass/screen.scss */
 .dark .focusList .noFocus span {
   color: #00ffff;
 }
-/* line 457, ../sass/screen.scss */
+/* line 468, ../sass/screen.scss */
 .dark .focusList .completed {
   background-color: #00ffff;
   color: #000;
 }
-/* line 461, ../sass/screen.scss */
+/* line 472, ../sass/screen.scss */
 .dark .focusList .completed button {
   color: #000;
 }
-/* line 466, ../sass/screen.scss */
+/* line 477, ../sass/screen.scss */
 .dark .focusList p {
   color: #fff;
   background-color: #00004d;
   border: 2px solid #00ffff;
 }
-/* line 470, ../sass/screen.scss */
+/* line 481, ../sass/screen.scss */
 .dark .focusList p:hover {
   border: 2px solid transparent;
 }
-/* line 475, ../sass/screen.scss */
+/* line 486, ../sass/screen.scss */
 .dark .focusList p input[type="checkbox"] {
   border: 1px solid #00ffff;
   background-color: #00004d;
 }
-/* line 478, ../sass/screen.scss */
+/* line 489, ../sass/screen.scss */
 .dark .focusList p input[type="checkbox"]:hover {
   background-color: #8a2be2;
   border: 1px solid transparent;
 }
-/* line 482, ../sass/screen.scss */
+/* line 493, ../sass/screen.scss */
 .dark .focusList p input[type="checkbox"]:checked {
   background-color: #00ffff;
 }
-/* line 487, ../sass/screen.scss */
+/* line 498, ../sass/screen.scss */
 .dark .focusList p button {
   color: #fff;
 }
 
 /* Animations */
-/* line 496, ../sass/screen.scss */
+/* line 507, ../sass/screen.scss */
 .fadeIn, .fadeOut, .flipIn, .rotateRight, .rotateLeft, .slideInLeft, .slideInRight, .slideOutLeft, .slideOutRight {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -527,7 +537,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 1;
   }
 }
-/* line 525, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
@@ -552,7 +562,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 0;
   }
 }
-/* line 555, ../sass/screen.scss */
+/* line 566, ../sass/screen.scss */
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -589,7 +599,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: perspective(400px);
   }
 }
-/* line 598, ../sass/screen.scss */
+/* line 609, ../sass/screen.scss */
 .flipIn {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
@@ -628,7 +638,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(360deg);
   }
 }
-/* line 642, ../sass/screen.scss */
+/* line 653, ../sass/screen.scss */
 .rotateRight {
   -webkit-animation-name: rotateRight;
   animation-name: rotateRight;
@@ -663,7 +673,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(-360deg);
   }
 }
-/* line 682, ../sass/screen.scss */
+/* line 693, ../sass/screen.scss */
 .rotateLeft {
   -webkit-animation-name: rotateLeft;
   animation-name: rotateLeft;
@@ -694,7 +704,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: translate(0);
   }
 }
-/* line 718, ../sass/screen.scss */
+/* line 729, ../sass/screen.scss */
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
@@ -725,7 +735,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: translate(0);
   }
 }
-/* line 754, ../sass/screen.scss */
+/* line 765, ../sass/screen.scss */
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
@@ -756,7 +766,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: translate(-100%);
   }
 }
-/* line 790, ../sass/screen.scss */
+/* line 801, ../sass/screen.scss */
 .slideOutLeft {
   -webkit-animation-name: slideOutLeft;
   animation-name: slideOutLeft;
@@ -787,7 +797,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: translate(100%);
   }
 }
-/* line 826, ../sass/screen.scss */
+/* line 837, ../sass/screen.scss */
 .slideOutRight {
   -webkit-animation-name: slideOutRight;
   animation-name: slideOutRight;
@@ -816,7 +826,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: translate3d(0, 100%, 0);
   }
 }
-/* line 860, ../sass/screen.scss */
+/* line 871, ../sass/screen.scss */
 .slideOutDown {
   -webkit-animation-name: slideOutDown;
   animation-name: slideOutDown;

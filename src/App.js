@@ -3,6 +3,7 @@ import Header from './components/Header'
 import AboutFocus from './components/AboutFocus'
 import SettingsSidebar from './components/SettingsSidebar'
 import AddFocusSidebar from './components/AddFocusSidebar'
+import Search from './components/Search'
 import FocusList from './components/FocusList'
 import Footer from './components/Footer'
 
@@ -67,6 +68,7 @@ class App extends Component {
         <AddFocusSidebar
           addFocus={this.addFocus}
         />
+        <Search />
         <FocusList
           focuses={this.state.focuses}
           toggleComplete={this.toggleComplete}

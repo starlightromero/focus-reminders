@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import settings from '../assets/settings.png'
 
 class Settings extends Component {
   sidebar = 'close'
@@ -32,7 +33,7 @@ class Settings extends Component {
       <button>
         <img
           id="settings"
-          onClick={this.handleClick} src="https://i.postimg.cc/tJDyNkRz/settings-256.png" alt="add"
+          onClick={this.handleClick} src={settings} alt="add"
         />
       </button>
     )

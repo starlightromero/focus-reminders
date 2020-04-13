@@ -198,8 +198,19 @@ $black: #000;
     }
   }
 
+  .search {
+    z-index: 1;
+    margin: 210px auto auto auto;
+    display: flex;
+
+    img {
+      height: 100px;
+      cursor: pointer;
+    }
+  }
+
   .focusList {
-    margin-top: 200px;
+    // margin-top: 250px;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
