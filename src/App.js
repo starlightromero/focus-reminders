@@ -20,7 +20,6 @@ class App extends Component {
       {id: 9, title: 'Take out trash', completed: false },
       {id: 10, title: 'Get groceries', completed: false },
       {id: 11, title: 'Wash dishes', completed: false },
-      {id: 12, title: 'Clean closet', completed: false },
     ]
   }
 
