@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class AddFocusSidebar extends Component {
+class FocusSidebar extends Component {
   state = {
     title: ''
   }
@@ -42,4 +42,4 @@ class AddFocusSidebar extends Component {
   }
 }
 
-export default AddFocusSidebar
+export default FocusSidebar

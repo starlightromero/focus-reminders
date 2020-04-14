@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from './components/Header'
 import AboutFocus from './components/AboutFocus'
 import SettingsSidebar from './components/SettingsSidebar'
-import AddFocusSidebar from './components/AddFocusSidebar'
+import FocusSidebar from './components/FocusSidebar'
 import Search from './components/Search'
 import FocusList from './components/FocusList'
 import Footer from './components/Footer'
@@ -22,8 +22,8 @@ class App extends Component {
       {id: 10, title: 'Get groceries', completed: false },
       {id: 11, title: 'Wash dishes', completed: false },
     ],
-    settingsOpen: false,
-    addFocusOpen: false
+    isSettingsOpen: false,
+    isFocusSidebarOpen: false
   }
 
   randomId = () => Math.floor(Math.random() * 1000)
@@ -62,10 +62,16 @@ class App extends Component {
   render() {
     return (
       <div id="App" className="App light">
-        <Header/>
+        <Header
+          isSettingsOpen={this.state.isSettingsOpen}
+          isFocusSidebarOpen={this.state.isFocusSidebarOpen}
+        />
         <AboutFocus />
-        <SettingsSidebar />
-        <AddFocusSidebar
+        <SettingsSidebar
+          isSettingsOpen={this.state.isSettingsOpen}
+        />
+        <FocusSidebar
+          isFocusSidebarOpen={this.state.isFocusSidebarOpen}
           addFocus={this.addFocus}
         />
         <Search />
