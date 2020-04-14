@@ -198,19 +198,34 @@ $black: #000;
     }
   }
 
-  .search {
-    z-index: 1;
-    margin: 210px auto auto auto;
-    display: flex;
+  .searchContainer {
+    margin-top: 220px;
+    height: 50px;
 
-    img {
-      height: 100px;
+    .search {
+      height: 100%;
       cursor: pointer;
+    }
+
+    form {
+
+      input[type="text"] {
+        font-size: 1.5rem;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $light-primary-color;
+        color: $black;
+      }
+
+      input[type="button"] {
+        background-color: transparent;
+        border: none;
+      }
     }
   }
 
   .focusList {
-    // margin-top: 250px;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
@@ -218,6 +233,7 @@ $black: #000;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 
     .noFocus {
@@ -871,4 +887,34 @@ $black: #000;
 .slideOutDown {
   -webkit-animation-name: slideOutDown;
   animation-name: slideOutDown;
+}
+
+/* Zoom In */
+
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
+.zoomIn {
+  @extend %animated;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
 }
